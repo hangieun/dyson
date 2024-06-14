@@ -125,6 +125,7 @@
         align-items: center;
         justify-content: center;
         transition: opacity 0.5s ease-in-out;
+        overflow: hidden;
     }
     .designSlide_elv.fixed{
         position: fixed;
@@ -140,6 +141,7 @@
         width: 100%;
         height: 100vh;
         object-fit: cover;
+        transform: scale(0.7);
     }
     .designStation{
         position: absolute;
@@ -254,33 +256,45 @@
         top: auto;
         bottom: 0;
     }
-    .headphoneImg {
+    .headphoneFrame {
         width: 1320px;
         height: 100vh;
-        object-fit: contain;
         border: 11px solid red;
         position: absolute;
         left: calc(50% - 660px);
         top: calc(50% - 50vh);
     }
-    .soundImg{
-        width: 455px;
+    .headphoneImg{
+        object-fit: contain;
+        width:100%;
+        height:100%;
+    }
+    .soundImg {
+        width: 615px;
         height: auto;
         object-fit: cover;
         position: absolute;
-        left: -90px;
-        bottom: 70px;
+        left: 353px;
+        bottom: 23px;
         opacity: 0;
     }
-    .soundImg.on{opacity: 1;}
-    .soundtxtStation.swiper{
-        border: 1px solid skyblue;
+    
+    .soundtxtStation{
         width: 400px;
         height: 430px;
         position: absolute;
-        right: 0;
-        bottom: 0;
+        right: 265px;
+        bottom: 50px;
+        overflow: hidden;
     }
+    .soundtxtTrain{
+        width: 100%;
+        /* height: 300%; */
+    }
+    .soundtxtTrain>li{
+        margin-bottom:120px;
+    }
+    .soundtxtTrain>li:last-of-type{margin-bottom:0}
     .soundtxtTrain>li>h5{
         color: #fff;
         margin-bottom: 20px;
@@ -517,7 +531,46 @@
         width: 100%;
         display: flex;
     }
+    .shopInfo>li{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .infoIcon{
+        margin-bottom: 40px;
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95px;
+        height: 95px;
+    }
+    .infoIcon>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .infoFrame{text-align: center;}
+    .infoTitle{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .infoTxt,.infoBtn{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .infoBtn{
+        margin-top: 20px;
+        color: #0071E3;
+    }
 
+
+    /* footer */
+    footer{
+        background: #F8F8F8;
+
+    }
 
 
 

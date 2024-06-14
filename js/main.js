@@ -16,6 +16,8 @@ $(document).ready(function() {
         let distance = scrTop - buildingTop
         let ani_per = distance / aniLength // 0~>1
         let ani_per2 = ani_per*66.666
+
+        let ani_per3 = 0.7+ani_per*0.7
         
 
 
@@ -29,6 +31,8 @@ $(document).ready(function() {
         if(distance>=0 && distance<aniLength){
             $(".designSlide_elv").addClass("fixed").removeClass("bottom")
             $(".designTrain").css("transform",`translateY(${-ani_per2}%)`)
+            // 이미지 커지기 어두워지면서
+            $(".designSlide_bg").css("transform",`scale(${ani_per3})`).css("filter",`brightness(${1-ani_per})`)
         }
 
         //엘리베이터를 지나친 상황
@@ -47,9 +51,25 @@ $(document).ready(function() {
         let aniLength = buildingHeight - elvHeight //애니메이션 구간
         let distance = scrTop - buildingTop
         let ani_per = distance / aniLength // 0~>1
-        let ani_per410 = ani_per*410  
-        let ani_per80 = ani_per*80
-        let ani_per065 = 1-(ani_per*0.35)
+
+        /////////////// 1type animation
+        let ani_1type = ani_per*100/(100/2) // 0~>100
+        let ani_1type_idx = Math.floor(ani_1type) // 0,1
+        let ani_1type_progress = ani_1type - ani_1type_idx // 인덱스가 0,1일 때 0~1로 올라가는 소수
+        
+        let ani_per410 = ani_1type_progress*410  
+        let ani_per80 = ani_1type_progress*80
+        let ani_per065 = 1-(ani_1type_progress*0.35)
+        let ani_per1 = ani_1type_progress*1
+        /////////////////////////////////////
+
+        ///////////// 2type animation
+
+        let ani_2type = ani_per*100/(100/3)
+        let ani_2type_idx = Math.floor(ani_2type)
+        let ani_2type_progress = ani_2type - ani_2type_idx
+        let ani_perSlide = ani_per*770
+        ////////////////////////////
   
         //도달하지 못한 상황
         if(distance<0){
@@ -59,9 +79,24 @@ $(document).ready(function() {
         //엘리베이터 진행중인 상황
         if(distance>=0 && distance<aniLength){
             $(".audioElv").addClass("fixed").removeClass("bottom")
-            $(".headphoneImg").css("transform",`translate(${-ani_per410}px, ${ani_per80}px)scale(${ani_per065})`)
-            $(".soundImg").addClass("on")
-            // transform: translate(-410px, 80px) scale(0.65);
+            if(ani_1type_idx==0){
+                $(".headphoneFrame").css("transform",`translate(${-ani_per410}px, ${ani_per80}px)scale(${ani_per065})`)
+            }
+            else if(ani_1type_idx==1){
+                $(".soundImg").css("opacity",ani_per1)
+            }
+
+            $(".soundtxtTrain").css("transform",`translateY(${-ani_perSlide}px)`)
+            // if(ani_2type_idx==0){
+                
+            // }
+            // else if(ani_2type_idx==1){
+            //     let count = 0
+            //     count++
+            //     if(count>2){count=0}
+            //     $(".soundtxtTrain").css("transform",`trasnlateY(${count*-33.333}%)`)
+            // }
+
 
         }
 
@@ -154,16 +189,6 @@ $(document).ready(function() {
         mousewheel: true,
     });
 
-
-
-    //-------------------------------------------------------------- 
-
-    var soundTxtSlide_swiper = new Swiper(".soundtxtStation", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-    });
 
     //-------------------------------------------------------------- 
 
