@@ -199,7 +199,15 @@ $(document).ready(function() {
         mousewheel: true,
     });
 
-
+    // -----------------------------------------------
+    // 탭메뉴 화살표
+    document.addEventListener('DOMContentLoaded', function() {
+        const titleElement = document.querySelector('.tabTitle');
+        
+        titleElement.addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+    });
 
     // 팝업 슬라이드
     $(".contentTxtframe>.subContents_btn").click(function(){

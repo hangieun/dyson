@@ -7,9 +7,9 @@
         width: 100%;
     }
     .inner_content{
+        border: 1px solid red;
         width: 1200px;
         margin: 0 auto;
-        border: 1px solid red;
         box-sizing: border-box;
     }
     h1{font-size: 130px;font-weight: 900;}
@@ -17,6 +17,7 @@
     h3{font-size: 60px;font-weight: 700;}
     h5,p{font-size: 30px;font-weight: 500;}
     .blackColor{color: black;font-weight: bold;}
+
     /* 상단 메뉴 */
     .header{
         width: 100%;
@@ -53,11 +54,40 @@
         align-items: center;
     }
 
+    /* 서브메뉴 */
+    .subIndex{
+        font-size: 20px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #C9C9C9;
+        box-sizing: border-box;
+        padding: 15px 0;
+    }
+    .subLnb{
+        display: flex;
+        align-items: center;
+    }
+    .subLnb>li{
+        margin-right: 35px;
+    }
+    .shopBtn{
+        background: #0071E3;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 40px;
+        border-radius: 40px;
+    }
+    .shopBtn:hover{filter: brightness(1.2);}
+
     /* 1섹션 다이슨존 인트로*/
     .intro{
         background: url(../1.img/1.bg_img.png) no-repeat 50% 30%;
-        border: 1px solid green;
-        
+        margin: 35px 0;
     }
     .intro>.inner_content{
         display: flex;
@@ -70,18 +100,14 @@
     }
     .dysonzoneIntro{
         text-align: center;
-        margin-top: 25px;
+        margin-top: 35px;
     }
-    .subIndex{
-        font-size: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .subLnb{display: flex;}
+    
 
     /* 2섹션 */
-    .design>h1{margin-top: 35px;}
+    .design>p{
+        padding: 35px 0;
+    }
     .designContent{
         display: flex;
         align-items: flex-end;
@@ -103,7 +129,6 @@
     }
     
     .designContent img{
-        border: 1px solid blue;
         width: 740px;
         height: 796px;
         object-fit: cover;
@@ -150,7 +175,6 @@
         transform: translate(-50%,-50%);
         width: 1200px;
         height: 100%;
-        border: 1px solid #fff;
     }
     .designTrain{
         width: 100%;
@@ -182,6 +206,7 @@
     /* 4섹션 프로토타입*/
     .prototype{
         align-items: center;
+        margin: 60px 0;
     }
     .prototype>.txtframe>p{
         width: 385px;
@@ -202,9 +227,13 @@
 
 
     /* 4섹션 휴대용 바이저*/
-    .visor{align-items: flex-end;}
-    .visor>img{
+    .visor{
+        align-items: flex-end;
+        transform: translateX(-30px);
+    }
+    .visorImg{
         width: 550px;
+        transform: translateX(-65px);
     }
     .visor>.txtframe{width: 580px;}
     .visorTxt_station.swiper{
@@ -308,7 +337,8 @@
     .battery{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        margin: 60px 0;
     }
     .subFrame>h3{
         width: 470px;
@@ -346,13 +376,13 @@
     }
     .whiteColor{color: #fff;}
     .noiseImgframe{
-        border: 1px solid lime;
         width: 780px;
         height: 600px;
         position: relative;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        transform: translateX(-80px);
     }
     .noiseImg{
         width: 720px;
@@ -377,17 +407,63 @@
 
 
     /* 다이슨 어플 탭메뉴 영역 */
+    .mydysonApp{margin-bottom: 80px;}
+    .mydysonApp>h1{
+        padding: 60px 0 120px 0;
+    }
     .mydysonTab{
+        border: 1px solid blue;
         width: 100%;
         height: 640px;
         border-radius: 50px;
         background: #F8F8F8;
         display: flex;
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .tabTitle{
+        font-size: 36px;
+        font-weight: 600;
+        border-bottom: 1px solid #6D6D6D;
+        width: 450px;
+        position: relative;
+        cursor: pointer;
+        pointer-events: auto;
+        margin-left: auto;
+    }
+    .tabTitle::after {
+        content: '';
+        background-image: url(../1.img/6.arrow_down.png);
+        background-size: cover;
+        width: 25px;
+        height: 30px;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-40%);
+        pointer-events: auto;
+    }
+    .tabTitle.open::after {
+        background-image: url(../1.img/6.arrow_up.png); /* 클릭 후 변경되는 화살표 */
+    }
+
+    .tabMenuFrame{display: flex;}
+    .tabTxt{
+        width: 450px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #6D6D6D;
+    }
+    .tabImg{
+        transform: translateX(-50px);
     }
 
 
     /* 제품 구매, 컨텐츠, 등록 영역 */
+    .subContents{margin: 100px 0;}
     .subContents>section{
+        border: 1px solid blue;
         margin: 10px auto;
         width: 1600px;
         height: 590px;
@@ -405,9 +481,20 @@
         color: #0071E3;
         font-size: 25px;
         font-weight: 500;
+        position: relative;
     }
     .subContents_btn:hover{
         border-bottom: 1.5px solid #0071E3;
+    }
+    .subContents_btn::after{
+        content: "";
+        width: 16px;
+        height: 16px;
+        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-40%);
     }
     .contentTxtframe>p{
         width: 350px;
@@ -554,23 +641,79 @@
     .infoFrame{text-align: center;}
     .infoTitle{
         font-size: 20px;
-        margin-bottom: 20px;
     }
     .infoTxt,.infoBtn{
         font-size: 18px;
         font-weight: 400;
     }
+    .infoTxt{
+        width: 210px;
+        margin: 20px 0;
+    }
     .infoBtn{
         margin-top: 20px;
         color: #0071E3;
+        position: relative;
+    }
+    .infoBtn:hover{
+        border-bottom: 1.5px solid #0071E3;
+    }
+    .infoBtn::after{
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-40%);
     }
 
 
     /* footer */
     footer{
+        box-sizing: border-box;
         background: #F8F8F8;
+        padding: 50px 0;
 
     }
+    .footerTop{
+        font-size: 18px;
+        border-bottom: 1px solid #4A4A4A;
+    }
+    .footCtg{
+        margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+    .footCtg>li{
+        margin-right: 20px;
+    }
+    .footCtg img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .footMenu{
+        display: flex;
+        align-items: flex-start;
+        width: 860px;
+        justify-content: space-between;
+    }
+    .footMenu h6{
+        font-weight: 500;
+    }
+    .footMenu li{
+        padding: 8px 0;
+        color: #4A4A4A;
+    }
+    .footInfo_list{
+        display: flex;
+    }
+    
 
 
 
