@@ -1,9 +1,33 @@
 $(document).ready(function() {
    
-    // $(window).scroll(function() {
-    //     let scrTop = $(window).scrollTop();
-    //     handleSection2Scroll(scrTop);
-    // });
+    
+    // header 메뉴
+    let scrTop = 0
+    $(window).scroll(function(){
+        let scrTop = $(window).scrollTop()
+        if(scrTop>200){
+            $(".headerWrap").hide()
+        }else{
+            $(".headerWrap").show()
+        }
+
+    })
+
+    $(".gnb>li").click(function(){
+        $(".gnb>li").removeClass("on")
+        $(this).addClass("on")
+    })
+    $(".gnb>li").mouseover(function(){
+        $(".header").addClass("on")
+        $(this).find(".subMenu").addClass("on")
+    })
+    $(".gnb>li").mouseout(function(){
+        $(this).find(".subMenu").removeClass("on")
+    })
+    $(".subMenu").mouseout(function(){
+        $(".header").removeClass("on")
+        $(".subMenu").removeClass("on")
+    })
     
     
     // 디자인 슬라이드 효과
@@ -70,7 +94,7 @@ $(document).ready(function() {
         let ani_2type_progress = ani_2type - ani_2type_idx
         let ani_perSlide = ani_per*770
         ////////////////////////////
-  
+        let ani_per850 = ani_1type_progress*850
         //도달하지 못한 상황
         if(distance<0){
             $(".audioElv").removeClass("fixed").removeClass("bottom")
@@ -86,17 +110,13 @@ $(document).ready(function() {
                 $(".soundImg").css("opacity",ani_per1)
             }
 
-            $(".soundtxtTrain").css("transform",`translateY(${-ani_perSlide}px)`)
-            // if(ani_2type_idx==0){
-                
-            // }
-            // else if(ani_2type_idx==1){
-            //     let count = 0
-            //     count++
-            //     if(count>2){count=0}
-            //     $(".soundtxtTrain").css("transform",`trasnlateY(${count*-33.333}%)`)
-            // }
-
+            if(ani_1type_idx==1){
+                $(".soundtxtStation").addClass("on")
+                $(".soundtxtTrain").css("transform",`translateY(${-ani_per850}px)`)
+            }else if(ani_1type_idx==0){
+                $(".soundtxtStation").removeClass("on")
+            }
+            
 
         }
 
@@ -111,16 +131,7 @@ $(document).ready(function() {
  
 
 
-    // 2섹션 텍스트 효과
-    // function handleSection2Scroll(scrTop) {
-    //     $(".designContent .txtframe>p").each(function() {
-    //         if (scrTop > $(this).offset().top - window.innerHeight * 0.7) {
-    //             $(this).addClass("on");
-    //         } else {
-    //             $(this).removeClass("on");
-    //         }
-    //     });
-    // }
+    // 텍스트 효과
     $(window).scroll(function(){
         let scrTop = 0
         let devHeight = $(window).height()
@@ -200,14 +211,35 @@ $(document).ready(function() {
     });
 
     // -----------------------------------------------
-    // 탭메뉴 화살표
-    document.addEventListener('DOMContentLoaded', function() {
-        const titleElement = document.querySelector('.tabTitle');
+    let tab_count = 0
+    $(".tabTitle").click(function(){
+        tab_count = ($(this).index())/2
+        if(tab_count>2){tab_count=0}
+        // $(".tabTxt").removeClass("on")
+        // $(".tabTxt").eq(tab_count).addClass("on")
+        // $(".tabTitle").removeClass("open")
+        // $(this).addClass("open")
+        $(".tabImgTrain>li").removeClass("on")
+        $(".tabImgTrain>li").eq(tab_count).addClass("on")
         
-        titleElement.addEventListener('click', function() {
-            this.classList.toggle('open');
-        });
-    });
+
+         // 클릭된 tabTitle의 open 클래스를 토글
+         if ($(this).hasClass("open")) {
+            $(this).removeClass("open");
+            $(".tabTxt").eq(tab_count).removeClass("on");
+        } else {
+            $(".tabTitle").removeClass("open");
+            $(this).addClass("open");
+
+            $(".tabTxt").removeClass("on");
+            $(".tabTxt").eq(tab_count).addClass("on");
+        }
+        
+
+    })
+
+
+
 
     // 팝업 슬라이드
     $(".contentTxtframe>.subContents_btn").click(function(){
@@ -222,11 +254,7 @@ $(document).ready(function() {
         slidesPerView: 5,
         spaceBetween: 30,
         centeredSlides: true,
-        pagination: {
-            el: ".popupPage.swiper-pagination",
-            clickable: true,
-          },
-      });
+    })
 
 
 
