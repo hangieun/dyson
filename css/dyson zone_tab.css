@@ -1,20 +1,21 @@
-@media(min-width:1024px){
+@media(min-width:768px) and (max-width:1023px){
     html{
         font-family: "Noto Sans KR", sans-serif;
     }
+    
     /* common style */
     .all{
         width: 100%;
     }
     .inner_content{
-        width: 1200px;
+        width: 90%;
         margin: 0 auto;
         box-sizing: border-box;
     }
-    h1{font-size: 130px;font-weight: 900;}
-    h2{font-size: 80px;font-weight: 700;}
-    h3{font-size: 60px;font-weight: 700;}
-    h5,p{font-size: 30px;font-weight: 500;}
+    h1{font-size: 85px;font-weight: 800;}
+    h2{font-size: 60px;font-weight: 700;}
+    h3{font-size: 40px;font-weight: 600;}
+    h5,p{font-size: 20px;font-weight: 500;}
     .blackColor{color: black;font-weight: bold;}
 
     /* 상단 메뉴 */
@@ -120,14 +121,14 @@
     /* 서브메뉴 */
     .subIndex{margin-top: 70px;}
     .subIndex .inner_content{
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid #C9C9C9;
         box-sizing: border-box;
-        padding: 15px 0;
+        padding: 10px 0;
     }
     .subCtg{
         font-weight: 600;
@@ -138,7 +139,7 @@
         align-items: center;
     }
     .subLnb>li{
-        margin-right: 35px;
+        margin-right: 25px;
     }
     .subLnb>li.on{
         color: #aaa;
@@ -149,15 +150,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 120px;
-        height: 40px;
-        border-radius: 40px;
+        width: 90px;
+        height: 30px;
+        border-radius: 80px;
     }
     .shopBtn:hover{filter: brightness(1.2);}
 
     /* 1섹션 다이슨존 인트로*/
     .intro{
-        background: url(../1.img/1.bg_img.png) no-repeat 50% 30%;
+        background: url(../1.img/1.bg_img.png) no-repeat 50% 28% / 800px;
         margin: 35px 0 100px 0;
     }
     .intro>.inner_content{
@@ -166,18 +167,18 @@
         align-items: center;
     }
     .introImg{
-        width: 90%;
+        width: 80%;
         object-fit: cover;
     }
     .dysonzoneIntro{
         text-align: center;
-        margin-top: 35px;
+        margin-top: 20px;
     }
     
 
     /* 2섹션 */
     .design>p{
-        padding: 35px 0;
+        padding: 20px 0;
     }
     .designContent{
         display: flex;
@@ -188,7 +189,7 @@
         width: 408px;
     }
     .designContent .txtframe>p{
-        padding: 32px 0;
+        padding: 15px 0;
         color: #6D6D6D;
         transition: all 0.7s ease 0s;
         opacity: 0;
@@ -198,10 +199,9 @@
         opacity: 1;
         transform: translateY(0);
     }
-    
     .designContent img{
-        width: 775px;
-        height: 796px;
+        width: 460px;
+        height: 450px;
         object-fit: cover;
     }
 
@@ -264,11 +264,12 @@
 
     /* 4섹션 공통 */
     .product>section{
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .product h3{
-        margin-bottom: 65px
+        margin-bottom: 40px
     }
     .product .txtframe p{
         color: #6D6D6D;
@@ -280,7 +281,7 @@
         margin: 60px 0;
     }
     .prototype>.txtframe>p{
-        width: 385px;
+        width: 300px;
         opacity: 0;
         transform: translateY(50px);
         transition: all 0.7s ease 0s;
@@ -290,8 +291,8 @@
         transform: translateY(0);
     }
     .prototype>img{
-        width: 600px;
-        height: 805px;
+        width: 350px;
+        height: 500px;
         object-fit: cover;
     }
 
@@ -300,26 +301,25 @@
     /* 4섹션 휴대용 바이저*/
     .visor{
         align-items: flex-end;
-        transform: translateX(-30px);
+        transform: translateX(-100px);
     }
     .visorImg{
-        width: 550px;
-        transform: translateX(-65px);
+        width: 400px;
+        transform: translateX(-10px);
     }
-    .visor>.txtframe{width: 580px;}
+    .visor>.txtframe{width: 390px;}
     .visorTxt_station.swiper{
-        border: 1px solid red;
-        height: 260px;
-        width: 580px;
+        height: 200px;
+        width: 390px;
     }
 
 
     /* 5섹션 */
     .sound{background: #000;}
     .sound .titleFrame{color: #fff;}
-    .titleFrame>p{padding: 35px 0;}
+    .titleFrame>p{padding: 35px 0 10px 0;}
     .sound .titleFrame>.txtframe{
-        width: 640px;
+        width: 460px;
         margin-left: auto;
         margin-top: 50px;
         margin-bottom: 100px;
@@ -356,10 +356,10 @@
         bottom: 0;
     }
     .headphoneFrame {
-        width: 1320px;
+        width: 720px;
         height: 100vh;
         position: absolute;
-        left: calc(50% - 660px);
+        left: calc(50% - 360px);
         top: calc(50% - 50vh);
     }
     .headphoneImg{
@@ -420,30 +420,30 @@
     .battery{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 150px 0;
     }
+    .subFrame{width: 350px;}
     .subFrame>h3{
-        width: 470px;
-        margin-right: auto;
         color: #fff;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 75px;
     }
     .batterytxtStation.swiper{
         color: #fff;
-        width: 355px;
-        height: 215px;
+        width: 100%;
+        height: 170px;
     }
     .batterytxtTrain>li{
         text-align: center;
     }
+    .batteryImg{
+        width: 350px;
+        height: 400px;
+        object-fit: cover;
+    }
 
     /* 노이즈캔슬링 영역 */
-    .noiseCancelling{
-        display: flex;
-        justify-content: space-around;
-    }
     .noiseCancelling>.txtframe{
         width: 315px;
         color: rgba(255, 255, 255, 0.7);
@@ -459,20 +459,20 @@
     }
     .whiteColor{color: #fff;}
     .noiseImgframe{
-        width: 780px;
-        height: 600px;
+        width: 580px;
+        height: 480px;
         position: relative;
         display: flex;
-        justify-content: flex-end;
         align-items: flex-end;
-        transform: translateX(-80px);
+        transform: translateX(70px);
     }
     .noiseImg{
-        width: 720px;
+        width: 570px;
         z-index: 100;
+        transform: translateX(30px);
     }
     .noiseEffect{
-        width: 735px;
+        width: 520px;
         position: absolute;
         top: 0;
         left: 0;
@@ -489,46 +489,28 @@
 
 
     /* 다이슨 어플 탭메뉴 영역 */
-    .mydysonApp{margin-bottom: 100px;}
-    .mydysonApp>h1{
-        padding: 60px 0 120px 0;
+    .mydysonApp{display: none;}
+    .mydysonApp_tablet>h1{
+        padding: 80px 0;
     }
-
-    .mydysonTab{
+    .mydysonTabMenu{
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         box-sizing: border-box;
         padding: 10px;
-        justify-content: space-around;
         background: #F8F8F8;
         border-radius: 50px;
         width: 100%;
-        height: 640px;
+        height: 550px;
     }
-    .tabImgStation{
-        width: 450px;
-        height: 490px;
+    .mydysonTab_img{
+        width: 200px;
+        height: 230px;
     }
-    .tabImgTrain{
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    .tabImgTrain>li{
-        position: absolute;
-        left: 0;
-        top: 0;
-        transition: all 0.7s ease 0s;
-        opacity: 0;
-        pointer-events: none;
-    }
-    .tabImgTrain>li.on{
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .tabTitle{
-        font-size: 36px;
+    .tab_title{
+        font-size: 25px;
         font-weight: 600;
         border-bottom: 1px solid #6D6D6D;
         width: 450px;
@@ -536,63 +518,71 @@
         cursor: pointer;
         padding: 25px 0;
     }
-    .tabTitle::after {
+    .tab_title::after {
         content: '';
         background-image: url(../1.img/6.arrow_down.png);
         background-size: cover;
-        width: 25px;
-        height: 30px;
+        width: 20px;
+        height: 25px;
         position: absolute;
         right: 0px;
         top: 50%;
         transform: translateY(-40%);
         cursor: pointer;
-        
     }
-    .tabTitle.open::after {
+    .tab_title.open::after {
         background-image: url(../1.img/6.arrow_up.png); 
     }
-    .tabTxt{
+    .tabFrame{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 450px;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 400;
         color: #6D6D6D; 
         height: 0;
         overflow: hidden;
         transition: all 0.7s ease 0s;
     }
-    .tabTxt.on{height: 150px;}
+    .tabFrame>p{
+        width: 200px;
+    }
+    .tabFrame.on{height: 240px;}
 
     /* 제품 구매, 컨텐츠, 등록 영역 */
     .subContents{margin: 100px 0;}
     .subContents>section{
         margin: 10px auto;
-        width: 1600px;
-        height: 590px;
+        width: 90%;
+        height: 400px;
         background: #F8F8F8;
     }
+    .subContents>section h2{font-size: 50px;}
+    .subContents>section img{width: 280px;}
     .subContents .inner_content{
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 60px;
+        padding: 10px;
     }
-    .subContents .inner_content h2 , .subContents .inner_content p{margin-bottom: 45px;}
+    .subContents .inner_content h2 , .subContents .inner_content p{margin-bottom: 20px;}
     .subContents_btn{
         color: #0071E3;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 500;
         position: relative;
         cursor: pointer;
     }
+    .shopTxtframe{width: 300px;}
     .subContents_btn:hover{
         border-bottom: 1.5px solid #0071E3;
     }
     .subContents_btn::after{
         content: "";
-        width: 16px;
-        height: 16px;
+        width: 12px;
+        height: 12px;
         background: url(../1.img/8.right_arrow.svg) no-repeat;
         position: absolute;
         right: -30px;
@@ -600,8 +590,9 @@
         transform: translateY(-40%);
     }
     .contentTxtframe>p{
-        width: 350px;
+        width: 280px;
     }
+
 
     /* ---------------컨텐츠 팝업---------------- */
     .modal{
@@ -630,31 +621,31 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: 785px;
+        height: 700px;
     }
     .popup_close{
         position: absolute;
         right: 2%;
         top: 0;
-        transform: translateX(10%);
         z-index: 800;
+        width: 25px;
+        height: 25px;
         cursor: pointer;
     }
     .popupTrain.swiper-wrapper{
         display: flex;
         align-items: center;
         width: 100%;
-        height: 100%;
+        height: 550px;
     }
     .popupTrain.swiper-wrapper>li{
         overflow: hidden;
-        border-radius: 45px;
         transition: all 1s ease 0s;
         position: relative;
         cursor: pointer;
         display: flex;
         align-items: center;
-        height: 518px;
+        height: 100%;
     }
     .popupTrain.swiper-wrapper>li p{
         position: absolute;
@@ -662,7 +653,7 @@
         top: 50%;
         transform: translate(-50% , -50%);
         color: #fff;
-        font-size: 50px;
+        font-size: 35px;
         font-weight: 600;
         opacity: 0;
         pointer-events: none;
@@ -686,7 +677,7 @@
         position: relative;
     }
     .supportTxtframe>p{
-        width: 545px;
+        width: 330px;
     }
     .supportImg{
         position: absolute;
