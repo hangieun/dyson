@@ -219,7 +219,7 @@
     .boxFrame.blackColor{
         color: black;
     }
-    .boxSlide_ctrl{
+    /* .boxSlide_ctrl{
         margin-left: auto;
         display: flex;
     }
@@ -232,7 +232,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
+    } */
 
     /* 제품 비교 문구 */
     .purifyCompare{
@@ -336,7 +336,15 @@
         height: 100vh;
         background: url(../img/5.banner.jpg) no-repeat 50% 50% / cover;
     }
-
+    
+    /* mydyson 어플 */
+    .appCtrl{
+        width: 100%;
+        border-radius: 20px;
+        border: 1px solid green;
+        background: #f8f8f8;
+        display: flex;
+    }
 
 
 }

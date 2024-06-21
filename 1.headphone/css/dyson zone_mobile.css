@@ -228,6 +228,7 @@
         width: 250px;
         height: 250px;
         object-fit: cover;
+        transform: translateX(70px);
     }
 
     /* 3섹션 디자인 슬라이드 */
@@ -644,10 +645,28 @@
         width: 90%;
         height: 700px;
     }
+    .popupFrame{
+        box-sizing: border-box;
+        padding: 0 50px;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .popupTitle{
+        box-sizing: border-box;
+        padding: 0 10px;
+        color: #fff;
+        width: 250px;
+    }
+    .popupTitle>p{
+        margin-top: 30px;
+    }
     .popup_close{
         position: absolute;
-        right: 2%;
-        top: 0;
+        right: 20px;
+        top: 20px;
         z-index: 800;
         width: 20px;
         height: 20px;

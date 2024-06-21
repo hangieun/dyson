@@ -642,8 +642,9 @@
         z-index: 100;
         display: none;
     }
-    .modal.on , .contentPopup.on{display: block;}
+    .modal.on ,.contentPopup.on{display: block;}
     .contentPopup{
+        display: none;
         z-index: 1000;
         position: fixed;
         width: 100%;
@@ -651,7 +652,23 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-        display: none;
+    }
+    .popupFrame{
+        box-sizing: border-box;
+        padding: 0 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .popupTitle{
+        box-sizing: border-box;
+        padding: 0 10px;
+        color: #fff;
+        width: 580px;
+    }
+    .popupTitle>p{
+        margin-top: 30px;
     }
     .popupStation.swiper{
         position: relative;
