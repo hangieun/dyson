@@ -1,0 +1,18 @@
+/* 브라우저에 기본설정되어있는 스타일을 초기화해주는 파일 ---------한기은 */
+
+/* reset */
+*{margin: 0; padding: 0;
+}
+a{color: inherit; text-decoration: none;}
+b,strong,h1,h2,h3,h4,h5,h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+i,em,address{
+    font-style: inherit;
+}
+ul,ol{list-style: none;}
+img{max-width: 100%;}
+/* 이미지 태그의 너비 최대값은 부모태그의 100% */
+table{border-collapse: collapse;}
+input{outline: none;}

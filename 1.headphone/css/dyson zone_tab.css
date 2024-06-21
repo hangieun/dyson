@@ -1,133 +1,176 @@
-@media(min-width:1024px){
+@media(min-width:768px) and (max-width:1023px){
     html{
         font-family: "Noto Sans KR", sans-serif;
+    }
+    body.on{
+        height: 100vh;overflow: hidden;
     }
     /* common style */
     .all{
         width: 100%;
     }
     .inner_content{
-        width: 1200px;
+        width: 90%;
         margin: 0 auto;
         box-sizing: border-box;
     }
-    h1{font-size: 130px;font-weight: 900;}
-    h2{font-size: 80px;font-weight: 700;}
-    h3{font-size: 60px;font-weight: 700;}
-    h5,p{font-size: 30px;font-weight: 500;}
+    h1{font-size: 85px;font-weight: 800;}
+    h2{font-size: 60px;font-weight: 700;}
+    h3{font-size: 40px;font-weight: 600;}
+    h5,p{font-size: 20px;font-weight: 500;}
     .blackColor{color: black;font-weight: bold;}
 
     /* 상단 메뉴 */
-    .headerWrap{
+    
+    .headerWrap,.mobileHeaderWrap{display: none;}
+    .header{display: none;}
+    
+    .headerWrap_tab{
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.7);
         width: 100%;
         position: fixed;
         left: 0;
         top: 0;
-    }
-    .header{
-        position: relative;
-        transition: all 0.7s ease 0s;
-        height: 60px;
-        background: rgba(255, 255, 255, 0.7);
-    }
-    .header.on{
-        position: absolute;
-        width: 100%;
-        height: 400px;
-        left: 0;
-        top: 0;
-        background: rgb(250,250,252);
-    }
-    .mainIndex{
-        height: 60px;
+        height: 50px;
         display: flex;
         align-items: center;
+        box-sizing: border-box;
+    }
+    .tabHeader{width: 100%;}
+    .tabHeader>.inner_content{
+        display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-    .logo{
-        width: 100px;
+    .tabLogo>a{
+        background: url(../1.img/1.dyson_logo.svg) no-repeat 50% 50% /contain;
+        display: flex;
+        align-items: cover;
         height: 40px;
+        width: 130px;
     }
-    .logo a{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        align-items: center;
+    .menuOpen{
+        display: block;
+        width: 35px;
+        height: 35px;
+        background: url(../1.img/1.menuBar.svg) no-repeat 50% 50% / cover;
     }
-    .gnb{
-        display: flex;
-        justify-content: space-around;
-        width: 820px;
-        position: relative;
-        font-weight: 500;
-        height: 60px;
-    }
-    .gnb>li>a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 60px;
-    }
-    .gnb>li.on>a{color: #aaa;}
  
 
     /* 2뎁스 메뉴 */
-    .subMenu{
+    .mainIndex_tab{
+        position: fixed;
+        height: 100vh;
         width: 100%;
-        position: absolute;
-        left: 20px;
-        top: 60px;
-        margin: 0 auto;
+        right: 0;
+        top: 0;
+        background: rgb(250,250,252);
         box-sizing: border-box;
-        display: flex;
-        font-size: 16px;
-        font-weight: 500;
-        display: flex;
+        padding: 10px;
+        transform: translateX(100%);
+        transition: all 0.7s ease 0s;
+    }
+    .mainIndex_tab a:hover{
+        color: #aaa;
+    }
+    .mainIndex_tab.on{
+        transform: translateX(0);
+    }
+    .menuClose{
+        display: block;
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+        background: url(../1.img/1.closeBtn.svg) no-repeat 50% 50% / cover;
+    }
+
+    .tabGnb{
+        margin-top: 25px;
+        padding-left: 15px;
+    }
+    .tabGnb>li{
+        position: relative;
+        width: 270px;
+        margin-bottom: 10px;
+    }
+    .tabGnb>li:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-40%);
+        width: 30px;
+        height: 30px;
+        background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
         opacity: 0;
         pointer-events: none;
         transition: all 0.7s ease 0s;
     }
-    .subMenu.on{
+    .tabGnb>li:nth-of-type(6):after{display: none;}
+    .tabGnb>li>a{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 600;
+        width: 300px;
+        position: relative;
+    }
+    .tabGnb>li:hover:after{
         opacity: 1;
         pointer-events: auto;
     }
-    .subMenu>li{margin-right: 100px;}
-    .subMenu>li:last-of-type{margin-right: 0;}
-    .productMenu{
-        font-size: 25px;
-        font-weight: 600;
+    .tabGnb>li:hover>.subMenu_tab{opacity: 1;}
+    .subMenu_tab{
+        position: absolute;
+        left: 300px;
+        top: 0;
+        width: 500px;
     }
-    .productMenu>li{padding: 8px 0;}
-    .subMenu h6{
-        color: #929292;
-        padding: 8px 0 15px 0;
-    }   
-    .menuLink>li{margin-bottom: 7px;}
-    .menuLink>li:last-of-type{margin-bottom: 0;}
-
-    .search{
-        width: 20px;
-        height: 20px;
+    .subMenu_tab{
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.7s ease 0s;
     }
-    .search a{
+    .tabGnb>li:hover>.subMenu_tab{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .subMenu_tab>li>a{
         display: flex;
-        width: 100%;
-        height: 100%;
         align-items: center;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .menuLink{
+        padding-left: 15px;
+        margin-top: 50px;
+        font-size: 16px;
+    }
+    .menuLink>h6{
+        color: #929292;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .menuLink>li{
+        padding-bottom: 5px;
+        font-weight: 500;
     }
 
 
     /* 서브메뉴 */
-    .subIndex{margin-top: 70px;}
-    .subIndex .inner_content{
-        font-size: 20px;
+    .subIndex{margin-top: 50px;}
+    .subIndex>.inner_content{
+        font-size: 16px;
         font-weight: 500;
         display: flex;
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid #C9C9C9;
         box-sizing: border-box;
-        padding: 15px 0;
+        padding: 10px 0;
     }
     .subCtg{
         font-weight: 600;
@@ -138,7 +181,7 @@
         align-items: center;
     }
     .subLnb>li{
-        margin-right: 35px;
+        margin-right: 25px;
     }
     .subLnb>li.on{
         color: #aaa;
@@ -149,16 +192,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 120px;
-        height: 40px;
-        border-radius: 40px;
+        width: 90px;
+        height: 30px;
+        border-radius: 80px;
     }
     .shopBtn:hover{filter: brightness(1.2);}
 
     /* 1섹션 다이슨존 인트로*/
     .intro{
-        background: url(../1.img/1.bg_img.png) no-repeat 50% 30%;
-        margin: 35px 0 100px 0;
+        background: url(../1.img/1.bg_img.png) no-repeat 50% 28% / 800px;
+        margin: 60px 0 100px 0;
     }
     .intro>.inner_content{
         display: flex;
@@ -166,18 +209,18 @@
         align-items: center;
     }
     .introImg{
-        width: 90%;
+        width: 80%;
         object-fit: cover;
     }
     .dysonzoneIntro{
         text-align: center;
-        margin-top: 35px;
+        margin-top: 20px;
     }
     
 
     /* 2섹션 */
     .design>p{
-        padding: 35px 0;
+        padding: 20px 0;
     }
     .designContent{
         display: flex;
@@ -188,7 +231,7 @@
         width: 408px;
     }
     .designContent .txtframe>p{
-        padding: 32px 0;
+        padding: 15px 0;
         color: #6D6D6D;
         transition: all 0.7s ease 0s;
         opacity: 0;
@@ -198,10 +241,9 @@
         opacity: 1;
         transform: translateY(0);
     }
-    
     .designContent img{
-        width: 775px;
-        height: 796px;
+        width: 460px;
+        height: 450px;
         object-fit: cover;
     }
 
@@ -264,11 +306,12 @@
 
     /* 4섹션 공통 */
     .product>section{
+        width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .product h3{
-        margin-bottom: 65px
+        margin-bottom: 40px
     }
     .product .txtframe p{
         color: #6D6D6D;
@@ -280,7 +323,7 @@
         margin: 60px 0;
     }
     .prototype>.txtframe>p{
-        width: 385px;
+        width: 300px;
         opacity: 0;
         transform: translateY(50px);
         transition: all 0.7s ease 0s;
@@ -290,8 +333,8 @@
         transform: translateY(0);
     }
     .prototype>img{
-        width: 600px;
-        height: 805px;
+        width: 350px;
+        height: 500px;
         object-fit: cover;
     }
 
@@ -300,26 +343,25 @@
     /* 4섹션 휴대용 바이저*/
     .visor{
         align-items: flex-end;
-        transform: translateX(-30px);
+        transform: translateX(-100px);
     }
     .visorImg{
-        width: 550px;
-        transform: translateX(-65px);
+        width: 400px;
+        transform: translateX(-10px);
     }
-    .visor>.txtframe{width: 580px;}
+    .visor>.txtframe{width: 390px;}
     .visorTxt_station.swiper{
-        border: 1px solid red;
-        height: 260px;
-        width: 580px;
+        height: 200px;
+        width: 390px;
     }
 
 
     /* 5섹션 */
     .sound{background: #000;}
     .sound .titleFrame{color: #fff;}
-    .titleFrame>p{padding: 35px 0;}
+    .titleFrame>p{padding: 35px 0 10px 0;}
     .sound .titleFrame>.txtframe{
-        width: 640px;
+        width: 460px;
         margin-left: auto;
         margin-top: 50px;
         margin-bottom: 100px;
@@ -333,85 +375,76 @@
         opacity: 1;
         transform: translateY(0);
     }
-    .audioBuilding{
+    .audioBuilding,.audioBuilding_mobile{display: none;}
+    .audioBuilding_tab{
         width: 100%;
         height: 8000px;
         position: relative;
     }
-    .audioElv{
+    .audioElv_tab{
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100vh;
     }
-    .audioElv.fixed{
+    .audioElv_tab.fixed{
         position: fixed;
         left: 0;
         top: 0;
     }
-    .audioElv.bottom{
+    .audioElv_tab.bottom{
         position: absolute;
         top: auto;
         bottom: 0;
     }
-    .headphoneFrame {
-        width: 1320px;
+    .headphoneFrame_tab{
+        width: 720px;
         height: 100vh;
         position: absolute;
-        left: calc(50% - 660px);
+        left: calc(50% - 360px);
         top: calc(50% - 50vh);
     }
-    .headphoneImg{
+    .headphoneImg_tab{
         object-fit: contain;
         width:100%;
         height:100%;
     }
-    .soundImg {
-        width: 615px;
+    .soundImg_tab{
+        width: 440px;
         height: auto;
         object-fit: cover;
         position: absolute;
-        left: 353px;
-        bottom: 23px;
+        left: 140px;
+        bottom: 150px;
         opacity: 0;
     }
-    .soundtxtStation{
-        width: 400px;
-        height: 430px;
+    .soundtxtStation_tab{
+        width: 300px;
+        height: 300px;
+        box-sizing: border-box;
         position: absolute;
-        right: 350px;
-        bottom: 50px;
+        right: 0px;
+        bottom: 0px;
+        padding-top: 50px;
         overflow: hidden;
-        padding-top: 150px;
-        display: none;
+        opacity: 0;
     }
-    .soundtxtStation.on{
-        display: block;
-    }
-    .soundtxtStation:before{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 150px;
-        background: linear-gradient(180deg, black, #0000004f);
-        z-index: 20;
-    }
-    .soundtxtTrain{
+    .soundtxtStation_tab.on{opacity: 1;}
+
+    .soundtxtTrain_tab{
         width: 100%;
 
     }
-    .soundtxtTrain>li{
-        margin-bottom:120px;
+    .soundtxtTrain_tab>li{
+        margin-bottom:80px;
     }
-    .soundtxtTrain>li:last-of-type{margin-bottom:0}
-    .soundtxtTrain>li>h5{
+    .soundtxtTrain_tab>li:last-of-type{margin-bottom:0}
+    .soundtxtTrain_tab>li>h5{
         color: #fff;
         margin-bottom: 20px;
     }
-    .soundtxtTrain>li>p{
+    .soundtxtTrain_tab>li>p{
         color: rgba(255, 255, 255, 0.7);
     }
 
@@ -420,30 +453,30 @@
     .battery{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 150px 0;
     }
+    .subFrame{width: 350px;}
     .subFrame>h3{
-        width: 470px;
-        margin-right: auto;
         color: #fff;
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 75px;
     }
     .batterytxtStation.swiper{
         color: #fff;
-        width: 355px;
-        height: 215px;
+        width: 100%;
+        height: 170px;
     }
     .batterytxtTrain>li{
         text-align: center;
     }
+    .batteryImg{
+        width: 350px;
+        height: 400px;
+        object-fit: cover;
+    }
 
     /* 노이즈캔슬링 영역 */
-    .noiseCancelling{
-        display: flex;
-        justify-content: space-around;
-    }
     .noiseCancelling>.txtframe{
         width: 315px;
         color: rgba(255, 255, 255, 0.7);
@@ -459,20 +492,20 @@
     }
     .whiteColor{color: #fff;}
     .noiseImgframe{
-        width: 780px;
-        height: 600px;
+        width: 580px;
+        height: 480px;
         position: relative;
         display: flex;
-        justify-content: flex-end;
         align-items: flex-end;
-        transform: translateX(-80px);
+        transform: translateX(70px);
     }
     .noiseImg{
-        width: 720px;
+        width: 570px;
         z-index: 100;
+        transform: translateX(30px);
     }
     .noiseEffect{
-        width: 735px;
+        width: 520px;
         position: absolute;
         top: 0;
         left: 0;
@@ -489,46 +522,28 @@
 
 
     /* 다이슨 어플 탭메뉴 영역 */
-    .mydysonApp{margin-bottom: 100px;}
-    .mydysonApp>h1{
-        padding: 60px 0 120px 0;
+    .mydysonApp{display: none;}
+    .mydysonApp_tablet>h1{
+        padding: 80px 0;
     }
-
-    .mydysonTab{
+    .mydysonTabMenu{
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
         box-sizing: border-box;
         padding: 10px;
-        justify-content: space-around;
         background: #F8F8F8;
         border-radius: 50px;
         width: 100%;
-        height: 640px;
+        height: 550px;
     }
-    .tabImgStation{
-        width: 450px;
-        height: 490px;
+    .mydysonTab_img{
+        width: 200px;
+        height: 230px;
     }
-    .tabImgTrain{
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-    .tabImgTrain>li{
-        position: absolute;
-        left: 0;
-        top: 0;
-        transition: all 0.7s ease 0s;
-        opacity: 0;
-        pointer-events: none;
-    }
-    .tabImgTrain>li.on{
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .tabTitle{
-        font-size: 36px;
+    .tab_title{
+        font-size: 25px;
         font-weight: 600;
         border-bottom: 1px solid #6D6D6D;
         width: 450px;
@@ -536,63 +551,71 @@
         cursor: pointer;
         padding: 25px 0;
     }
-    .tabTitle::after {
+    .tab_title::after {
         content: '';
         background-image: url(../1.img/6.arrow_down.png);
         background-size: cover;
-        width: 25px;
-        height: 30px;
+        width: 20px;
+        height: 25px;
         position: absolute;
         right: 0px;
         top: 50%;
         transform: translateY(-40%);
         cursor: pointer;
-        
     }
-    .tabTitle.open::after {
+    .tab_title.open::after {
         background-image: url(../1.img/6.arrow_up.png); 
     }
-    .tabTxt{
+    .tabFrame{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 450px;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 400;
         color: #6D6D6D; 
         height: 0;
         overflow: hidden;
         transition: all 0.7s ease 0s;
     }
-    .tabTxt.on{height: 150px;}
+    .tabFrame>p{
+        width: 200px;
+    }
+    .tabFrame.on{height: 240px;}
 
     /* 제품 구매, 컨텐츠, 등록 영역 */
     .subContents{margin: 100px 0;}
     .subContents>section{
         margin: 10px auto;
-        width: 1600px;
-        height: 590px;
+        width: 90%;
+        height: 400px;
         background: #F8F8F8;
     }
+    .subContents>section h2{font-size: 50px;}
+    .subContents>section img{width: 280px;}
     .subContents .inner_content{
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0px 60px;
+        padding: 10px;
     }
-    .subContents .inner_content h2 , .subContents .inner_content p{margin-bottom: 45px;}
+    .subContents .inner_content h2 , .subContents .inner_content p{margin-bottom: 20px;}
     .subContents_btn{
         color: #0071E3;
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 500;
         position: relative;
         cursor: pointer;
     }
+    .shopTxtframe{width: 300px;}
     .subContents_btn:hover{
         border-bottom: 1.5px solid #0071E3;
     }
     .subContents_btn::after{
         content: "";
-        width: 16px;
-        height: 16px;
+        width: 12px;
+        height: 12px;
         background: url(../1.img/8.right_arrow.svg) no-repeat;
         position: absolute;
         right: -30px;
@@ -600,8 +623,9 @@
         transform: translateY(-40%);
     }
     .contentTxtframe>p{
-        width: 350px;
+        width: 280px;
     }
+
 
     /* ---------------컨텐츠 팝업---------------- */
     .modal{
@@ -611,12 +635,12 @@
         height: 100%;
         left: 0;
         top: 0;
-        z-index: 100;
+        z-index: 2000;
         display: none;
     }
     .modal.on , .contentPopup.on{display: block;}
     .contentPopup{
-        z-index: 1000;
+        z-index: 2500;
         position: fixed;
         width: 100%;
         height: 785px;
@@ -630,31 +654,29 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: 785px;
+        height: 820px;
     }
     .popup_close{
         position: absolute;
         right: 2%;
         top: 0;
-        transform: translateX(10%);
         z-index: 800;
+        width: 25px;
+        height: 25px;
         cursor: pointer;
     }
     .popupTrain.swiper-wrapper{
         display: flex;
         align-items: center;
-        width: 100%;
-        height: 100%;
     }
     .popupTrain.swiper-wrapper>li{
         overflow: hidden;
-        border-radius: 45px;
         transition: all 1s ease 0s;
         position: relative;
         cursor: pointer;
         display: flex;
         align-items: center;
-        height: 518px;
+        height: 100%;
     }
     .popupTrain.swiper-wrapper>li p{
         position: absolute;
@@ -662,7 +684,7 @@
         top: 50%;
         transform: translate(-50% , -50%);
         color: #fff;
-        font-size: 50px;
+        font-size: 35px;
         font-weight: 600;
         opacity: 0;
         pointer-events: none;
@@ -686,7 +708,7 @@
         position: relative;
     }
     .supportTxtframe>p{
-        width: 545px;
+        width: 330px;
     }
     .supportImg{
         position: absolute;
@@ -699,11 +721,13 @@
     
     /* 구매 혜택 영역 */
     .shopInfo{
+        box-sizing: border-box;
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 30px;
     }
     .shopInfo>li{
-        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -713,8 +737,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 95px;
-        height: 95px;
+        width: 80px;
+        height: 80px;
     }
     .infoIcon>img{
         width: 100%;
@@ -723,10 +747,10 @@
     }
     .infoFrame{text-align: center;}
     .infoTitle{
-        font-size: 20px;
+        font-size: 18px;
     }
     .infoTxt,.infoBtn{
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
     }
     .infoTxt{
@@ -762,18 +786,30 @@
         padding: 50px 0;
     }
     .footerTop{
-        font-size: 18px;
+        font-size: 16px;
         border-bottom: 1px solid #4A4A4A;
     }
     .footCtg{
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
         font-weight: 500;
     }
     .footCtg>li{
         margin-right: 20px;
+        position: relative;
     }
+    .footCtg>li:after{
+        position: absolute;
+        content: "";
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+        width: 20px;
+        height: 20px;
+    }
+    .footCtg>li:last-of-type:after{display: none;}
     .footCtg img{
         display: flex;
         align-items: center;
@@ -782,23 +818,25 @@
         height: 100%;
     }
     .footMenu{
-        padding: 20px 0;
-        display: flex;
-        align-items: flex-start;
-        width: 860px;
-        justify-content: space-between;
+        padding: 30px 0;
+        width: 100%;
+        box-sizing: border-box;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
     .footMenu h6{
         font-weight: 500;
+        margin-bottom: 10px;
     }
-    .footMenu li{
-        padding: 8px 0;
+    .footMenu>ul>li{
+        padding: 5px 0;
         color: #4A4A4A;
     }
 
     /* footer 하단 */
     .footerBottom{
-        font-size: 16px;
+        font-size: 14px;
         color: #4A4A4A;
     }
     .footInfo{
@@ -808,7 +846,9 @@
         padding: 15px 0;
     }
     .footInfo_list{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 10px;
     }
     .footInfo_list>li{
         margin-right: 25px;
@@ -818,31 +858,37 @@
     }
     .langBtn{
         color: #0071E3;
+        width: 52px;
+        height: 15px;
         position: relative;
+        display: block;
         transform: translateX(-10px);
     }
     .langBtn::after{
         content: "";
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         background: url(../1.img/8.right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
-        transform: translateY(-40%);
+        transform: translateY(-20%);
     }
     .footInfo2{
         margin-top: 30px;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
-    .footInfo2>ul{margin-right: 50px;}
-    .footInfo2>ul:last-of-type{margin-right: 0;}
-    .footInfo2>ul>li{padding: 8px 0;}
+    .footInfo2>ul{flex: 1;}
+
+    .footInfo2>ul>li{
+        padding: 5px 0;
+    }
     .infoCtg{font-weight: 500;}
     .infoNumber{display: flex;}
     .infoNumber>p{
         margin-right: 20px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
     }
     .infoNumber>p:last-of-type{margin-right: 0;}

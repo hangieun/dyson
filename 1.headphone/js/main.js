@@ -1,32 +1,6 @@
 $(document).ready(function() {
    
     
-    // header 메뉴
-    let scrTop = 0
-    $(window).scroll(function(){
-        let scrTop = $(window).scrollTop()
-        if(scrTop>200){
-            $(".headerWrap").hide()
-        }else{
-            $(".headerWrap").show()
-        }
-
-    })
-
-    $(".gnb>li").click(function(){
-        $(".gnb>li").removeClass("on")
-        $(this).addClass("on")
-    })
-    $(".gnb>li").mouseover(function(){
-        $(".header").addClass("on")
-        $(this).find(".subMenu").addClass("on")
-    })
-    $(".gnb>li").mouseout(function(){
-        $(".header").removeClass("on")
-        $(this).find(".subMenu").removeClass("on")
-    })
-    
-    
     // 디자인 슬라이드 효과
     $(window).scroll(function(){
         let scrTop = $(window).scrollTop()
@@ -125,8 +99,115 @@ $(document).ready(function() {
     })
     // --------------------------------------------------------------------------------
     
- 
+    // tablet 헤드폰 슬라이드 효과
+    $(window).scroll(function(){
+        let scrTop = $(window).scrollTop()
+        let buildingTop = $(".audioBuilding_tab").offset().top
+        let buildingHeight = $(".audioBuilding_tab").height()
+        let elvHeight = $(".audioElv_tab").height()
+        let aniLength = buildingHeight - elvHeight //애니메이션 구간
+        let distance = scrTop - buildingTop
+        let ani_per = distance / aniLength // 0~>1
 
+        /////////////// 1type animation
+        let ani_1type = ani_per*100/(100/2) // 0~>100
+        let ani_1type_idx = Math.floor(ani_1type) // 0,1
+        let ani_1type_progress = ani_1type - ani_1type_idx // 인덱스가 0,1일 때 0~1로 올라가는 소수
+        
+        let ani_per60 = ani_1type_progress*60  
+        let ani_per30 = ani_1type_progress*30
+        let ani_per08 = 1-(ani_1type_progress*0.2)
+        let ani_per1 = ani_1type_progress*1
+        let ani_per580 = ani_1type_progress*580
+        ////////////////////////////////////
+
+
+ 
+        //도달하지 못한 상황
+        if(distance<0){
+            $(".audioElv_tab").removeClass("fixed").removeClass("bottom")
+        }
+
+        //엘리베이터 진행중인 상황
+        if(distance>=0 && distance<aniLength){
+            $(".audioElv_tab").addClass("fixed").removeClass("bottom")
+            if(ani_1type_idx==0){
+                $(".headphoneFrame_tab").css("transform",`translate(${-ani_per60}px, ${ani_per30}px)scale(${ani_per08})`)
+                $(".headphoneImg_tab").css("filter",`brightness(${ani_per08})`)
+
+            }
+            else if(ani_1type_idx==1){
+                $(".soundImg_tab").css("opacity",ani_per1)
+                
+            }
+            if(ani_1type_idx==1){
+                $(".soundtxtStation_tab").addClass("on")
+                $(".soundtxtTrain_tab").css("transform",`translateY(${-ani_per580}px)`)
+            }else if(ani_1type_idx==0){
+                $(".soundtxtStation_tab").removeClass("on")
+            }
+            
+
+        }
+
+        //엘리베이터를 지나친 상황
+        if(distance>aniLength){
+            $(".audioElv_tab").removeClass("fixed").addClass("bottom")
+        }
+
+    })
+
+    // mobile 헤드폰 슬라이드
+    $(window).scroll(function(){
+        let scrTop = $(window).scrollTop()
+        let buildingTop = $(".audioBuilding_mobile").offset().top
+        let buildingHeight = $(".audioBuilding_mobile").height()
+        let elvHeight = $(".audioElv_mobile").height()
+        let aniLength = buildingHeight - elvHeight //애니메이션 구간
+        let distance = scrTop - buildingTop
+        let ani_per = distance / aniLength // 0~>1
+
+        /////////////// 1type animation
+        let ani_1type = ani_per*100/(100/2) // 0~>100
+        let ani_1type_idx = Math.floor(ani_1type) // 0,1
+        let ani_1type_progress = ani_1type - ani_1type_idx // 인덱스가 0,1일 때 0~1로 올라가는 소수
+        
+        let ani_per30 = ani_1type_progress*30
+        let ani_per08 = 1-(ani_1type_progress*0.2)
+        let ani_per1 = ani_1type_progress*1
+        let ani_per260 = ani_1type_progress*260
+        ////////////////////////////////////
+
+
+ 
+        //도달하지 못한 상황
+        if(distance<0){
+            $(".audioElv_mobile").removeClass("fixed").removeClass("bottom")
+        }
+
+        //엘리베이터 진행중인 상황
+        if(distance>=0 && distance<aniLength){
+            $(".audioElv_mobile").addClass("fixed").removeClass("bottom")
+            if(ani_1type_idx==0){
+                $(".headphoneImg_mobile").css("filter",`brightness(${ani_per08})`)
+                $(".soundImg_mobile").css("opacity",ani_per1)
+                $(".soundtxtStation_mobile").addClass("on")
+                $(".soundtxtTrain_mobile").css("transform",`translateY(${-ani_per260}px)`)
+
+            }
+            else if(ani_1type_idx==1){
+                $(".soundtxtStation_mobile").removeClass("on")
+            }
+            
+
+        }
+
+        //엘리베이터를 지나친 상황
+        if(distance>aniLength){
+            $(".audioElv_mobile").removeClass("fixed").addClass("bottom")
+        }
+
+    })
 
     // 텍스트 효과
     $(window).scroll(function(){
@@ -246,16 +327,16 @@ $(document).ready(function() {
     })
 
 
-
-
     // 팝업 슬라이드
     $(".contentTxtframe>.subContents_btn").click(function(){
         $(".modal").addClass("on")
         $(".contentPopup").addClass("on")
+        $("body").addClass("on")
     })
     $(".popup_close").click(function(){
         $(".modal").removeClass("on")
         $(".contentPopup").removeClass("on")
+        $("body").removeClass("on")
     })
     var popup_swiper = new Swiper(".popupStation", {
         slidesPerView: 5,
@@ -277,8 +358,7 @@ $(document).ready(function() {
         }
     })
 
-
-
+   
 
 
 
