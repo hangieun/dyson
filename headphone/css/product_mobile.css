@@ -44,7 +44,7 @@
        align-items: center;
    }
    .mobileLogo>a{
-       background: url(../1.img/1.dyson_logo.svg) no-repeat 50% 50% /contain;
+       background: url(../img/dyson_logo.svg) no-repeat 50% 50% /contain;
        display: flex;
        align-items: cover;
        height: 32px;
@@ -54,7 +54,7 @@
        display: block;
        width: 30px;
        height: 30px;
-       background: url(../1.img/1.menuBar.svg) no-repeat 50% 50% / cover;
+       background: url(../img/menuBar.svg) no-repeat 50% 50% / cover;
    }
 
 
@@ -82,7 +82,7 @@
        margin-left: auto;
        width: 30px;
        height: 30px;
-       background: url(../1.img/1.closeBtn.svg) no-repeat 50% 50% / cover;
+       background: url(../img/closeBtn.svg) no-repeat 50% 50% / cover;
    }
 
    .mobileGnb{
@@ -102,7 +102,7 @@
        transform: translateY(-40%);
        width: 20px;
        height: 20px;
-       background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+       background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
        opacity: 0;
        pointer-events: none;
        transition: all 0.7s ease 0s;
@@ -364,7 +364,7 @@
         content: "";
         width: 10px;
         height: 10px;
-        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
@@ -398,7 +398,7 @@
         right: -20px;
         top: 50%;
         transform: translateY(-50%);
-        background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
         width: 20px;
         height: 20px;
     }
@@ -431,10 +431,10 @@
         right: 10px;
         top: 50%;
         transform: translateY(-40%);
-        background: url(../1.img/6.arrow_down.png) no-repeat 50% 50% / cover;
+        background: url(../img/arrow_down.png) no-repeat 50% 50% / cover;
     }
     .footMenu h6.open:after{
-        background: url(../1.img/6.arrow_up.png) no-repeat 50% 50% / cover;
+        background: url(../img/arrow_up.png) no-repeat 50% 50% / cover;
     }
     .footMenu>ul>li{
         padding: 5px 0;
@@ -474,7 +474,7 @@
         content: "";
         width: 10px;
         height: 10px;
-        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -13px;
         top: 50%;

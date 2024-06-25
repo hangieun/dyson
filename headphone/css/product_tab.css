@@ -39,7 +39,7 @@
        align-items: center;
    }
    .tabLogo>a{
-       background: url(../1.img/1.dyson_logo.svg) no-repeat 50% 50% /contain;
+       background: url(../img/dyson_logo.svg) no-repeat 50% 50% /contain;
        display: flex;
        align-items: cover;
        height: 40px;
@@ -49,7 +49,7 @@
        display: block;
        width: 35px;
        height: 35px;
-       background: url(../1.img/1.menuBar.svg) no-repeat 50% 50% / cover;
+       background: url(../img/menuBar.svg) no-repeat 50% 50% / cover;
    }
 
 
@@ -77,7 +77,7 @@
        margin-left: auto;
        width: 40px;
        height: 40px;
-       background: url(../1.img/1.closeBtn.svg) no-repeat 50% 50% / cover;
+       background: url(../img/closeBtn.svg) no-repeat 50% 50% / cover;
    }
 
    .tabGnb{
@@ -97,7 +97,7 @@
        transform: translateY(-40%);
        width: 30px;
        height: 30px;
-       background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+       background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
        opacity: 0;
        pointer-events: none;
        transition: all 0.7s ease 0s;
@@ -355,7 +355,7 @@
         content: "";
         width: 14px;
         height: 14px;
-        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
@@ -390,7 +390,7 @@
         right: -20px;
         top: 50%;
         transform: translateY(-50%);
-        background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
         width: 20px;
         height: 20px;
     }
@@ -453,7 +453,7 @@
         content: "";
         width: 10px;
         height: 10px;
-        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;

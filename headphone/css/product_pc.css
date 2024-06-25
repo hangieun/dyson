@@ -335,7 +335,7 @@
         content: "";
         width: 14px;
         height: 14px;
-        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
@@ -371,7 +371,7 @@
         right: -22px;
         top: 50%;
         transform: translateY(-50%);
-        background: url(../1.img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
         width: 25px;
         height: 25px;
     }
@@ -428,7 +428,7 @@
         content: "";
         width: 12px;
         height: 12px;
-        background: url(../1.img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;

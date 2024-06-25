@@ -321,7 +321,7 @@
     .productBanner{
         width: 100%;
         height: 100vh;
-        background: url(../img/5.banner.jpg) no-repeat 50% 50% / cover;
+        background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
     }
     
     /* mydyson 어플 */
@@ -502,7 +502,7 @@
     .productBackground{
         margin-top: 50px;
         height: 700px;
-        background: url(../img/3.background.jpg) no-repeat 50% 50% / cover;
+        background: url(../img/background.jpg) no-repeat 50% 50% / cover;
         background-attachment: fixed;
     }
      /* 제품 비교*/
@@ -636,7 +636,7 @@
         transform: translateY(-40%);
         width: 30px;
         height: 30px;
-        background: url(../img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
     }
     .tabBtn:hover{
         border-bottom: 1px solid #495780;
@@ -704,7 +704,7 @@
         content: "";
         width: 14px;
         height: 14px;
-        background: url(../img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
@@ -739,7 +739,7 @@
         right: -22px;
         top: 50%;
         transform: translateY(-50%);
-        background: url(../img/10.footer_arrow.svg) no-repeat 50% 50% / cover;
+        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
         width: 25px;
         height: 25px;
     }
@@ -795,7 +795,7 @@
         content: "";
         width: 14px;
         height: 14px;
-        background: url(../img/8.right_arrow.svg) no-repeat;
+        background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
