@@ -50,7 +50,7 @@
        display: flex;
        align-items: cover;
        height: 32px;
-       width: 120px;
+       width: 90px;
    }
    .mo_menuOpen{
        display: block;
@@ -69,7 +69,7 @@
        top: 0;
        background: rgb(250,250,252);
        box-sizing: border-box;
-       padding: 20px;
+       padding: 15px;
        transform: translateX(100%);
        transition: all 0.7s ease 0s;
    }
@@ -93,7 +93,6 @@
        background: url(../img/closeBtn.svg) no-repeat 50% 50% / cover;
    }
    .mobileGnb{
-       padding-left: 15px;
        position: relative;
    }
    .mobileGnb>li{
@@ -108,7 +107,7 @@
        align-items: center;
        font-size: 16px;
        font-weight: 600;
-       width: 280px;
+       width: 100%;
        position: relative;
    }
    .mobileGnb>li:hover:after{
@@ -132,9 +131,8 @@
     }
    .subMenu_mobile{
        position: absolute;
-       left: 200px;
+       left: 50%;
        top: 0;
-       width: 500px;
        opacity: 0;
        pointer-events: none;
        transition: all 0.7s ease 0s;
@@ -206,7 +204,6 @@
 
     /* 1섹션 다이슨존 인트로*/
     .intro{
-        background: url(../img/bg_img.png) no-repeat 50% 45% / 180px;
         margin: 25px 0 40px 0;
     }
     .intro>.inner_content{
@@ -220,7 +217,21 @@
         width: 60%;
         object-fit: cover;
     }
+    .dysonzoneIntro::before{
+        content: "";
+        position: absolute;
+        width: 90%;
+        background: url(../img/bg_img.png) no-repeat 50% 50% / contain;
+        border: 1px solid red;
+        margin: 0 auto;
+        height: 50px;
+        left: 50%;
+        top: -30%;
+        transform: translateX(-50%);
+
+    }
     .dysonzoneIntro{
+        position: relative;
         text-align: center;
         margin-top: 70px;
     }
@@ -279,7 +290,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-        width: 1200px;
+        width: 90%;
         height: 100%;
     }
     .designTrain{
@@ -350,7 +361,7 @@
     }
     .audioBuilding,.audioBuilding_tab{display: none;}
     .headphoneFrame_mobile{
-        width: 340px;
+        width: 100%;
         position: relative;
     }
     .headphoneImg_mobile{
