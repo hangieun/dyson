@@ -157,59 +157,11 @@ $(document).ready(function() {
 
     })
 
-    // mobile 헤드폰 슬라이드
-    $(window).scroll(function(){
-        let scrTop = $(window).scrollTop()
-        let buildingTop = $(".audioBuilding_mobile").offset().top
-        let buildingHeight = $(".audioBuilding_mobile").height()
-        let elvHeight = $(".audioElv_mobile").height()
-        let aniLength = buildingHeight - elvHeight //애니메이션 구간
-        let distance = scrTop - buildingTop
-        let ani_per = distance / aniLength // 0~>1
+   
 
-        /////////////// 1type animation
-        let ani_1type = ani_per*100/(100/2) // 0~>100
-        let ani_1type_idx = Math.floor(ani_1type) // 0,1
-        let ani_1type_progress = ani_1type - ani_1type_idx // 인덱스가 0,1일 때 0~1로 올라가는 소수
-        
-        let ani_per30 = ani_1type_progress*30
-        let ani_per08 = 1-(ani_1type_progress*0.2)
-        let ani_per1 = ani_1type_progress*1
-        let ani_per260 = ani_1type_progress*260
-        ////////////////////////////////////
-
-
- 
-        //도달하지 못한 상황
-        if(distance<0){
-            $(".audioElv_mobile").removeClass("fixed").removeClass("bottom")
-        }
-
-        //엘리베이터 진행중인 상황
-        if(distance>=0 && distance<aniLength){
-            $(".audioElv_mobile").addClass("fixed").removeClass("bottom")
-            if(ani_1type_idx==0){
-                $(".headphoneImg_mobile").css("filter",`brightness(${ani_per08})`)
-                $(".soundImg_mobile").css("opacity",ani_per1)
-                $(".soundtxtStation_mobile").addClass("on")
-                $(".soundtxtTrain_mobile").css("transform",`translateY(${-ani_per260}px)`)
-
-            }
-            else if(ani_1type_idx==1){
-                $(".soundtxtStation_mobile").removeClass("on")
-            }
-            
-
-        }
-
-        //엘리베이터를 지나친 상황
-        if(distance>aniLength){
-            $(".audioElv_mobile").removeClass("fixed").addClass("bottom")
-        }
-
-    })
 
     // 텍스트 효과
+
     $(window).scroll(function(){
         let scrTop = 0
         let devHeight = $(window).height()
@@ -219,64 +171,50 @@ $(document).ready(function() {
                 $(this).addClass("on")    
             }else{$(this).removeClass("on")}
         })
-    })
-
-    $(window).scroll(function(){
-        let scrTop = 0
-        let devHeight = $(window).height()
-        scrTop = $(this).scrollTop()
         $(".prototype>.txtframe>p").each(function(){
             if(scrTop > $(this).offset().top - devHeight*0.7){
                 $(this).addClass("on")    
             }else{$(this).removeClass("on")}
         })
-    })
-
-    $(window).scroll(function(){
-        let scrTop = 0
-        let devHeight = $(window).height()
-        scrTop = $(this).scrollTop()
+        $(".visor>.txtframe>p").each(function(){
+            if(scrTop > $(this).offset().top - devHeight*0.7){
+                $(this).addClass("on")    
+            }else{$(this).removeClass("on")}
+        })
         $(".noiseCancelling>.txtframe>p").each(function(){
             if(scrTop > $(this).offset().top - devHeight*0.7){
                 $(this).addClass("on")    
             }else{$(this).removeClass("on")}
         })
-    })
-    $(window).scroll(function(){
-        let scrTop = 0
-        let devHeight = $(window).height()
-        scrTop = $(this).scrollTop()
         $(".noiseEffect").each(function(){
             if(scrTop > $(this).offset().top - devHeight*0.7){
                 $(this).addClass("on")    
             }else{$(this).removeClass("on")}
         })
-    })
-    $(window).scroll(function(){
-        let scrTop = 0
-        let devHeight = $(window).height()
-        scrTop = $(this).scrollTop()
         $(".titleFrame>.txtframe>p").each(function(){
             if(scrTop > $(this).offset().top - devHeight*0.7){
                 $(this).addClass("on")    
             }else{$(this).removeClass("on")}
         })
+        $(".batterytxtTrain>li").each(function(){
+            if(scrTop > $(this).offset().top - devHeight*0.7){
+                $(this).addClass("on")    
+            }else{$(this).removeClass("on")}
+        })
+        $(".soundImg_mobile").each(function(){
+            if(scrTop > $(this).offset().top - devHeight*0.7){
+                $(this).addClass("on")    
+            }else{$(this).removeClass("on")}
+        })
+
+
+
     })
-   
 
 
 
-    
 
-    //-------------------------------------------------------------- 
 
-    // 4섹션 휴대용 바이저 텍스트 슬라이드
-    var visorSlide_swiper = new Swiper(".visorTxt_station", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-    });
 
 
     //-------------------------------------------------------------- 

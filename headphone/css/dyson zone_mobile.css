@@ -152,7 +152,7 @@
    }
    .mobileIndex_bottom{
         display: flex;
-        margin-top: 50px;
+        margin-top: 30px;
    }
    .mobileIndex_bottom>ul:first-of-type{margin-right: 20px;}
    .menuLink_mobile{
@@ -162,7 +162,7 @@
    .menuLink_mobile>h6{
        color: #929292;
        font-weight: 500;
-       margin-bottom: 15px;
+       margin-bottom: 8px;
    }
    .menuLink_mobile>li{
        padding-bottom: 5px;
@@ -244,7 +244,7 @@
     /* 3섹션 디자인 슬라이드 */
     .designSlide.building{
         width: 100%;
-        height: 9000px;
+        height: 4500px;
         position: relative;
     }
     .designSlide_elv{
@@ -327,10 +327,7 @@
     /* 4섹션 휴대용 바이저*/
     .visorImg{display: none;}
     .visor>.txtframe{width: 250px;}
-    .visorTxt_station.swiper{
-        height: 120px;
-        width: 250px;
-    }
+    .visor>.txtframe>p{margin-bottom: 20px;}
 
 
     /* 5섹션 */
@@ -353,34 +350,9 @@
         transform: translateY(0);
     }
     .audioBuilding,.audioBuilding_tab{display: none;}
-    .audioBuilding_mobile{
-        width: 100%;
-        height: 5000px;
-        position: relative;
-    }
-    .audioElv_mobile{
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100vh;
-    }
-    .audioElv_mobile.fixed{
-        position: fixed;
-        left: 0;
-        top: 0;
-    }
-    .audioElv_mobile.bottom{
-        position: absolute;
-        top: auto;
-        bottom: 0;
-    }
     .headphoneFrame_mobile{
         width: 340px;
-        height: 500px;
-        position: absolute;
-        left: calc(50% - 170px);
-        top: calc(50%-250px);
+        position: relative;
     }
     .headphoneImg_mobile{
         object-fit: contain;
@@ -392,65 +364,65 @@
         height: auto;
         object-fit: cover;
         position: absolute;
-        left: 70px;
-        top: 50%;
-        transform: translateY(-10%);
-        opacity: 0;
-    }
-    .soundtxtStation_mobile{
-        width: 200px;
-        height: 180px;
-        box-sizing: border-box;
-        position: absolute;
         left: calc(50% - 100px);
-        bottom: 40%;
-        padding-top: 30px;
-        overflow: hidden;
+        bottom: 0;
+        transform: translateY(50px);
         opacity: 0;
+        transition: all 0.7s ease 0s;
     }
-    .soundtxtStation_mobile.on{opacity: 1;}
-
+    .soundImg_mobile.on{
+        opacity: 1;
+        transform: translateY(0);
+    }
     .soundtxtTrain_mobile{
-        width: 100%;
-
+        color: #fff;
+        width: 70%;
+        margin: 0 auto;
+    
     }
     .soundtxtTrain_mobile>li{
-        margin-bottom:40px;
-    }
-    .soundtxtTrain_mobile>li:last-of-type{margin-bottom:0}
-    .soundtxtTrain_mobile>li>h5{
-        color: #fff;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .soundtxtTrain_mobile>li>p{
         color: rgba(255, 255, 255, 0.7);
     }
 
-
     /* 배터리 영역 */
     .battery{
+        border: 1px solid pink;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 100px 0;
+    }
+    .subFrame{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .subFrame{width: 350px;}
     .subFrame>h3{
         color: #fff;
         text-align: center;
         margin-bottom: 35px;
     }
-    .batterytxtStation.swiper{
+    .batterytxtStation{
+        margin-top: 30px;
         color: #fff;
-        width: 100%;
-        height: 110px;
     }
     .batterytxtTrain>li{
         text-align: center;
+        margin-bottom: 20px;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all 0.7s ease 0s;
     }
+    .batterytxtTrain>li.on{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .batterytxtTrain>li:last-of-type{margin-bottom: 0;}
     .batteryImg{
         width: 90%;
-        height: 400px;
-        object-fit: cover;
     }
 
     /* 노이즈캔슬링 영역 */
