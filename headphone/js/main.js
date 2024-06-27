@@ -213,19 +213,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-    //-------------------------------------------------------------- 
-
-    var batteryTxtSlide_swiper = new Swiper(".batterytxtStation", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-    });
-
     // -----------------------------------------------
     let tab_count = 0
     $(".tabTitle").click(function(){
