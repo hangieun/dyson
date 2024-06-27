@@ -154,8 +154,8 @@
    }
    .mobileIndex_bottom>ul:first-of-type{margin-right: 20px;}
    .menuLink_mobile{
-       padding-left: 15px;
        font-size: 14px;
+       width: 40%;
    }
    .menuLink_mobile>h6{
        color: #929292;
@@ -222,11 +222,10 @@
         position: absolute;
         width: 90%;
         background: url(../img/bg_img.png) no-repeat 50% 50% / contain;
-        border: 1px solid red;
         margin: 0 auto;
         height: 50px;
         left: 50%;
-        top: -30%;
+        top: -50px;
         transform: translateX(-50%);
 
     }
