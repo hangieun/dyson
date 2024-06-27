@@ -22,142 +22,154 @@
 
     /* 상단 메뉴 */
     
-    .headerWrap,.mobileHeaderWrap{display: none;}
-    .header{display: none;}
-    
-    .headerWrap_tab{
-        z-index: 1000;
-        background: rgba(255, 255, 255, 0.7);
-        width: 100%;
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        box-sizing: border-box;
-    }
-    .tabHeader{width: 100%;}
-    .tabHeader>.inner_content{
+   .headerWrap,.mobileHeaderWrap{display: none;}
+   .header{display: none;}
+   
+   .headerWrap_tab{
+       z-index: 1000;
+       background: rgba(255, 255, 255, 0.7);
+       width: 100%;
+       position: fixed;
+       left: 0;
+       top: 0;
+       height: 50px;
+       display: flex;
+       align-items: center;
+       box-sizing: border-box;
+   }
+   .tabHeader{width: 100%;}
+   .tabHeader>.inner_content{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .tabLogo>a{
+       background: url(../img/dyson_logo.svg) no-repeat 50% 50% /contain;
+       display: flex;
+       align-items: cover;
+       height: 40px;
+       width: 130px;
+   }
+   .menuOpen{
+       display: block;
+       width: 35px;
+       height: 35px;
+       background: url(../img/menuBar.svg) no-repeat 50% 50% / cover;
+   }
+
+
+   /* 2뎁스 메뉴 */
+   .mainIndex_tab{
+       position: fixed;
+       height: 100vh;
+       width: 100%;
+       right: 0;
+       top: 0;
+       background: rgb(250,250,252);
+       box-sizing: border-box;
+       padding: 10px;
+       transform: translateX(100%);
+       transition: all 0.7s ease 0s;
+   }
+   .mainIndex_tab a:hover{
+       color: #aaa;
+   }
+   .mainIndex_tab.on{
+       transform: translateX(0);
+   }
+   .mainIndex_top{
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    .tabLogo>a{
-        background: url(../img/dyson_logo.svg) no-repeat 50% 50% /contain;
-        display: flex;
-        align-items: cover;
-        height: 40px;
-        width: 130px;
-    }
-    .menuOpen{
-        display: block;
-        width: 35px;
-        height: 35px;
-        background: url(../img/menuBar.svg) no-repeat 50% 50% / cover;
-    }
- 
+        margin-bottom: 40px;
+   }
+   .menuClose{
+       display: block;
+       margin-left: auto;
+       width: 40px;
+       height: 40px;
+       background: url(../img/closeBtn.svg) no-repeat 50% 50% / cover;
+   }
 
-    /* 2뎁스 메뉴 */
-    .mainIndex_tab{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        right: 0;
-        top: 0;
-        background: rgb(250,250,252);
-        box-sizing: border-box;
-        padding: 10px;
-        transform: translateX(100%);
-        transition: all 0.7s ease 0s;
+   .tabGnb{
+       margin-top: 25px;
+       padding-left: 15px;
+       position: relative;
     }
-    .mainIndex_tab a:hover{
-        color: #aaa;
-    }
-    .mainIndex_tab.on{
-        transform: translateX(0);
-    }
-    .menuClose{
-        display: block;
-        margin-left: auto;
-        width: 40px;
-        height: 40px;
-        background: url(../img/closeBtn.svg) no-repeat 50% 50% / cover;
-    }
+   .tabGnb>li{
+       width: 270px;
+       margin-bottom: 10px;
+   }
 
-    .tabGnb{
-        margin-top: 25px;
-        padding-left: 15px;
-    }
-    .tabGnb>li{
-        position: relative;
-        width: 270px;
-        margin-bottom: 10px;
-    }
-    .tabGnb>li:after{
+   .tabGnb>li:nth-of-type(6):after{display: none;}
+   .tabGnb>li>a{
+       display: flex;
+       height: 50px;
+       align-items: center;
+       font-size: 25px;
+       font-weight: 600;
+       width: 300px;
+       position: relative;
+   }
+   .tabGnb>li:hover>.subMenu_tab::before{
+       opacity: 1;
+       pointer-events: auto;
+   }
+   .tabGnb>li:hover>.subMenu_tab{opacity: 1;}
+   .subMenu_tab{
+       position: absolute;
+       left: 300px;
+       top: 0;
+       width: 500px;
+   }
+   .subMenu_tab::before{
         content: "";
         position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-40%);
+        left: 0;
+        top: 0;
+        transform: translate(-100% , 25%);
         width: 30px;
         height: 30px;
         background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
-        opacity: 0;
+        opacity: 1;
         pointer-events: none;
         transition: all 0.7s ease 0s;
     }
-    .tabGnb>li:nth-of-type(6):after{display: none;}
-    .tabGnb>li>a{
+   .subMenu_tab{
+       opacity: 0;
+       pointer-events: none;
+       transition: all 0.7s ease 0s;
+   }
+   .tabGnb>li:hover>.subMenu_tab{
+       opacity: 1;
+       pointer-events: auto;
+   }
+   .subMenu_tab>li>a{
+       display: flex;
+       align-items: center;
+       height: 40px;
+       font-size: 20px;
+       font-weight: 500;
+   }
+   .mainIndex_bottom{
         display: flex;
-        height: 50px;
-        align-items: center;
-        font-size: 25px;
-        font-weight: 600;
-        width: 300px;
-        position: relative;
-    }
-    .tabGnb>li:hover:after{
-        opacity: 1;
-        pointer-events: auto;
-    }
-    .tabGnb>li:hover>.subMenu_tab{opacity: 1;}
-    .subMenu_tab{
-        position: absolute;
-        left: 300px;
-        top: 0;
-        width: 500px;
-    }
-    .subMenu_tab{
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.7s ease 0s;
-    }
-    .tabGnb>li:hover>.subMenu_tab{
-        opacity: 1;
-        pointer-events: auto;
-    }
-    .subMenu_tab>li>a{
-        display: flex;
-        align-items: center;
-        height: 40px;
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .menuLink{
-        padding-left: 15px;
         margin-top: 50px;
-        font-size: 16px;
     }
-    .menuLink>h6{
-        color: #929292;
-        font-weight: 500;
-        margin-bottom: 15px;
-    }
-    .menuLink>li{
-        padding-bottom: 5px;
-        font-weight: 500;
-    }
+    .mainIndex_bottom>ul{height: 250px;}
+    .mainIndex_bottom>ul:first-of-type{margin-right: 30px;}
+   .menuLink{
+       padding-left: 15px;
+       font-size: 16px;
+   }
+   .menuLink>h6{
+       color: #929292;
+       font-weight: 500;
+       margin-bottom: 15px;
+   }
+   .menuLink>li{
+       padding-bottom: 5px;
+       font-weight: 500;
+   }
 
 
     /* 서브메뉴 */

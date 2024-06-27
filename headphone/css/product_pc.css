@@ -173,6 +173,7 @@
         width: 120px;
         height: 40px;
         border-radius: 40px;
+        margin: 0 auto;
     }
     .shopBtn:hover{filter: brightness(1.2);}
 
@@ -202,6 +203,7 @@
         border-bottom: 1px solid #ccc;
         text-align: center;
         margin-bottom: 50px;
+        padding-bottom: 15px;
     }
     .productIntro img{
         width: 300px;
@@ -217,22 +219,21 @@
     .productIntro>.price{
         font-weight: 500;
         font-size: 25px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .productCompare{
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .productCompare>li{
-        margin-bottom: 70px;
+        display: grid;
+        row-gap: 50px;
     }
     .productCompare>li>p{
-        padding: 8px 0;
+        padding: 5px 0;
+    }
+    .productCompare>li>img{
     }
     .appTxt{
         width: 240px;
+        margin: 0 auto;
     }
 
 
@@ -241,20 +242,31 @@
     .component{
         background: #f8f8f8;
         padding-top: 50px;
+        margin-bottom: 80px;
     }
     .component h2{
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
     }
-    .package,.size{
+    .package{
        margin-bottom: 50px;
     }
     .packageList{
         display: grid;
-        grid-template-columns: 50% 50%;
-        margin-top: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+        width: 80%;
+        margin: 30px auto 0 auto;
     }
-    .packageList li{padding: 8px 0;}
+    .packageList>ul{
+        box-sizing: border-box;
+        padding-left: 40px;
+
+    }
+    .packageList li{
+        padding: 8px 0;
+    }
+
     
     /* 크기, 무게 */
     .size{

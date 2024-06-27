@@ -72,6 +72,12 @@
    .mainIndex_tab.on{
        transform: translateX(0);
    }
+   .mainIndex_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+   }
    .menuClose{
        display: block;
        margin-left: auto;
@@ -83,25 +89,13 @@
    .tabGnb{
        margin-top: 25px;
        padding-left: 15px;
-   }
-   .tabGnb>li{
        position: relative;
+    }
+   .tabGnb>li{
        width: 270px;
        margin-bottom: 10px;
    }
-   .tabGnb>li:after{
-       content: "";
-       position: absolute;
-       right: 0;
-       top: 50%;
-       transform: translateY(-40%);
-       width: 30px;
-       height: 30px;
-       background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
-       opacity: 0;
-       pointer-events: none;
-       transition: all 0.7s ease 0s;
-   }
+
    .tabGnb>li:nth-of-type(6):after{display: none;}
    .tabGnb>li>a{
        display: flex;
@@ -112,7 +106,7 @@
        width: 300px;
        position: relative;
    }
-   .tabGnb>li:hover:after{
+   .tabGnb>li:hover>.subMenu_tab::before{
        opacity: 1;
        pointer-events: auto;
    }
@@ -123,6 +117,19 @@
        top: 0;
        width: 500px;
    }
+   .subMenu_tab::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(-100% , 25%);
+        width: 30px;
+        height: 30px;
+        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
+        opacity: 1;
+        pointer-events: none;
+        transition: all 0.7s ease 0s;
+    }
    .subMenu_tab{
        opacity: 0;
        pointer-events: none;
@@ -139,9 +146,14 @@
        font-size: 20px;
        font-weight: 500;
    }
+   .mainIndex_bottom{
+        display: flex;
+        margin-top: 50px;
+    }
+    .mainIndex_bottom>ul{height: 250px;}
+    .mainIndex_bottom>ul:first-of-type{margin-right: 30px;}
    .menuLink{
        padding-left: 15px;
-       margin-top: 50px;
        font-size: 16px;
    }
    .menuLink>h6{
@@ -190,6 +202,7 @@
        width: 90px;
        height: 30px;
        border-radius: 80px;
+       margin: 0 auto;
    }
    .shopBtn:hover{filter: brightness(1.2);}
 
@@ -220,6 +233,7 @@
         border-bottom: 1px solid #ccc;
         text-align: center;
         margin-bottom: 50px;
+        padding-bottom: 15px;
     }
     .productIntro img{
         width: 240px;
@@ -235,7 +249,7 @@
     .productIntro>.price{
         font-weight: 500;
         font-size: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .productCompare{
         text-align: center;
@@ -248,8 +262,9 @@
     }
     .productCompare>li:last-of-type{margin-bottom: 20px;}
     .productCompare>li>p{
-        padding: 8px 0;
+        padding: 5px 0;
     }
+    .productCompare img{width: 60px;}
     .appTxt{
         width: 240px;
     }
@@ -257,18 +272,29 @@
 
 
     /* 구성품 */
-    .component{background: #f8f8f8;}
+    .component{
+        background: #f8f8f8;
+        margin: 50px 0;
+        padding: 50px 0;
+    }
     .component h2{
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
     }
-    .package,.size{
-        margin: 30px 0;
+    .package{
+        margin-bottom: 30px;
     }
     .packageList{
         display: grid;
-        grid-template-columns: 50% 50%;
-        margin-top: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 50px;
+        width: 90%;
+        margin: 30px auto 0 auto;
+    }
+    .packageList>ul{
+        box-sizing: border-box;
+        padding-left: 40px;
+
     }
     .packageList li{padding: 8px 0;}
     
