@@ -433,13 +433,8 @@
     }
     .eventList{
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
     .eventList>li{
-        width: 46%;
-        height: 100%;
         border-radius: 15px;
         overflow: hidden;
         position: relative;
@@ -451,10 +446,18 @@
     }
     .eventTxt{
         position: absolute;
-        left: 10%;
+        left: 15%;
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
+    }
+    .eventTxt>h5{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .eventTxt>p{
+        font-size: 20px;
+        margin: 20px 0;
     }
     .eventFrame{
         display: flex;
@@ -475,11 +478,13 @@
 
      /* 구매 혜택 영역 */
      .shopInfo{
+        box-sizing: border-box;
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 60px;
     }
     .shopInfo>li{
-        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -489,11 +494,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 95px;
-        height: 95px;
+        width: 55px;
+        height: 55px;
     }
     .infoIcon>img{
-        width: 75px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     .infoFrame{text-align: center;}
@@ -537,7 +543,7 @@
         padding: 50px 0;
     }
     .footerTop{
-        font-size: 18px;
+        font-size: 16px;
         border-bottom: 1px solid #4A4A4A;
     }
     .footCtg{
@@ -546,23 +552,24 @@
     }
 
     .footMenu{
-        padding: 20px 0;
-        display: flex;
-        align-items: flex-start;
-        width: 90%;
-        justify-content: space-between;
+        padding: 30px 0;
+        width: 100%;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
     }
     .footMenu h6{
         font-weight: 500;
+        margin-bottom: 10px;
     }
-    .footMenu li{
-        padding: 8px 0;
+    .footMenu>ul>li{
+        padding: 5px 0;
         color: #4A4A4A;
     }
 
     /* footer 하단 */
     .footerBottom{
-        font-size: 16px;
+        font-size: 14px;
         color: #4A4A4A;
     }
     .footInfo{
@@ -572,7 +579,9 @@
         padding: 15px 0;
     }
     .footInfo_list{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 10px;
     }
     .footInfo_list>li{
         margin-right: 25px;
@@ -582,31 +591,37 @@
     }
     .langBtn{
         color: #0071E3;
+        width: 52px;
+        height: 15px;
         position: relative;
+        display: block;
         transform: translateX(-10px);
     }
     .langBtn::after{
         content: "";
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
         background: url(../img/right_arrow.svg) no-repeat;
         position: absolute;
         right: -20px;
         top: 50%;
-        transform: translateY(-40%);
+        transform: translateY(-20%);
     }
     .footInfo2{
         margin-top: 30px;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
-    .footInfo2>ul{margin-right: 50px;}
-    .footInfo2>ul:last-of-type{margin-right: 0;}
-    .footInfo2>ul>li{padding: 8px 0;}
+    .footInfo2>ul{flex: 1;}
+
+    .footInfo2>ul>li{
+        padding: 5px 0;
+    }
     .infoCtg{font-weight: 500;}
     .infoNumber{display: flex;}
     .infoNumber>p{
         margin-right: 20px;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
     }
     .infoNumber>p:last-of-type{margin-right: 0;}
