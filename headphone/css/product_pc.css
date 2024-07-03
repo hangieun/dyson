@@ -1,37 +1,10 @@
 @media(min-width:1024px){
-    html{
-        font-family: "Noto Sans KR", sans-serif;
-    }
-    .all{
-        width: 100%;
-    }
-    .inner_content{
-        width: 1200px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
+   
     h1{font-size: 65px;font-weight: 800;}
     h2{font-size: 45px;font-weight: 600;}
     h3{font-size: 25px;font-weight: 600;}
     p{font-size: 20px;font-weight: 400;}
     
-
-    .wrap::after{
-        position: fixed;
-        left: 0;
-        top: 0;
-        content: "";
-        width: 100%;
-        height: 100vh;
-        backdrop-filter: blur(30px);
-        opacity: 0;
-        pointer-events: none;
-    }
-    .wrap.on::after{
-        opacity: 1;
-    }
-
-
 
     /* 상단 메뉴 */
     .headerWrap_tab,.mobileHeaderWrap{display: none;}
