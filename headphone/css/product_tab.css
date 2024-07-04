@@ -321,12 +321,11 @@
 
     /* 구매 혜택 영역 */
     .shopInfo{
-        margin-top: 50px;
         box-sizing: border-box;
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
-        row-gap: 30px;
+        row-gap: 60px;
     }
     .shopInfo>li{
         display: flex;
@@ -338,8 +337,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80px;
-        height: 80px;
+        width: 55px;
+        height: 55px;
     }
     .infoIcon>img{
         width: 100%;
@@ -348,18 +347,18 @@
     }
     .infoFrame{text-align: center;}
     .infoTitle{
-        font-size: 18px;
+        font-size: 20px;
+        margin-bottom: 15px;
     }
     .infoTxt,.infoBtn{
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 400;
     }
     .infoTxt{
         width: 210px;
-        margin: 20px 0;
+        margin-top: 10px;
     }
     .infoBtn{
-        margin-top: 20px;
         font-weight: 500;
         color: #0071E3;
         position: relative;
@@ -379,120 +378,6 @@
     }
 
 
-    /* footer 상단 */
-    footer{
-        margin-top: 80px;
-        box-sizing: border-box;
-        background: #F8F8F8;
-        padding: 50px 0;
-    }
-    .footerTop{
-        font-size: 16px;
-        border-bottom: 1px solid #4A4A4A;
-    }
-    .footCtg{
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-    }
-    .footCtg>li{
-        margin-right: 20px;
-        position: relative;
-    }
-    .footCtg>li:after{
-        position: absolute;
-        content: "";
-        right: -20px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
-        width: 20px;
-        height: 20px;
-    }
-    .footCtg>li:last-of-type:after{display: none;}
-    .footCtg img{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-    .footMenu{
-        padding: 30px 0;
-        width: 100%;
-        box-sizing: border-box;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-    }
-    .footMenu h6{
-        font-weight: 500;
-        margin-bottom: 10px;
-    }
-    .footMenu>ul>li{
-        padding: 5px 0;
-        color: #4A4A4A;
-    }
-
-    /* footer 하단 */
-    .footerBottom{
-        font-size: 14px;
-        color: #4A4A4A;
-    }
-    .footInfo{
-        display: flex;
-        justify-content: space-between;
-        font-weight: 500;
-        padding: 15px 0;
-    }
-    .footInfo_list{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        row-gap: 10px;
-    }
-    .footInfo_list>li{
-        margin-right: 25px;
-    }
-    .footInfo_list>li:last-of-type{
-        margin-right: 0;
-    }
-    .langBtn{
-        color: #0071E3;
-        width: 52px;
-        height: 15px;
-        position: relative;
-        display: block;
-        transform: translateX(-20px);
-    }
-    .langBtn::after{
-        content: "";
-        width: 10px;
-        height: 10px;
-        background: url(../img/right_arrow.svg) no-repeat;
-        position: absolute;
-        right: -20px;
-        top: 50%;
-        transform: translateY(-20%);
-    }
-    .footInfo2{
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-    }
-    .footInfo2>ul{flex: 1;}
-
-    .footInfo2>ul>li{
-        padding: 5px 0;
-    }
-    .infoCtg{font-weight: 500;}
-    .infoNumber{display: flex;}
-    .infoNumber>p{
-        margin-right: 20px;
-        font-size: 14px;
-        font-weight: 400;
-    }
-    .infoNumber>p:last-of-type{margin-right: 0;}
 
 
 

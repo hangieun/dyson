@@ -269,9 +269,8 @@
     }
 
 
-    /* 구매 혜택 영역 */
-    .shopInfo{
-        margin-top: 30px;
+     /* 구매 혜택 영역 */
+     .shopInfo{
         width: 100%;
         display: flex;
     }
@@ -290,14 +289,13 @@
         height: 95px;
     }
     .infoIcon>img{
-        width: 100%;
-        height: 100%;
+        width: 75px;
         object-fit: cover;
     }
     .infoFrame{text-align: center;}
     .infoTitle{
         font-size: 20px;
-        font-weight: 600;
+        margin-bottom: 15px;
     }
     .infoTxt,.infoBtn{
         font-size: 18px;
@@ -305,10 +303,9 @@
     }
     .infoTxt{
         width: 210px;
-        margin: 20px 0;
+        margin-top: 10px;
     }
     .infoBtn{
-        margin-top: 20px;
         font-weight: 500;
         color: #0071E3;
         position: relative;
@@ -326,118 +323,6 @@
         top: 50%;
         transform: translateY(-40%);
     }
-
-
-    /* footer 상단 */
-    footer{
-        margin-top: 80px;
-        box-sizing: border-box;
-        background: #F8F8F8;
-        padding: 50px 0;
-    }
-    .footerTop{
-        font-size: 18px;
-        border-bottom: 1px solid #4A4A4A;
-    }
-    .footerTop a{font-size: 18px;}
-    .footCtg{
-        margin-bottom: 50px;
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-    }
-    .footCtg>li{
-        margin-right: 20px;
-        position: relative;
-    }
-    .footCtg>li:after{
-        position: absolute;
-        content: "";
-        right: -22px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: url(../img/footer_arrow.svg) no-repeat 50% 50% / cover;
-        width: 25px;
-        height: 25px;
-    }
-    .footCtg>li:last-of-type:after{display: none;}
-    .footCtg img{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-    .footMenu{
-        padding: 20px 0;
-        display: flex;
-        align-items: flex-start;
-        width: 860px;
-        justify-content: space-between;
-    }
-    .footMenu h6{
-        font-weight: 500;
-    }
-    .footMenu li{
-        padding: 8px 0;
-        color: #4A4A4A;
-    }
-
-    /* footer 하단 */
-    .footInfo{
-        display: flex;
-        justify-content: space-between;
-        font-weight: 500;
-        padding: 15px 0;
-    }
-    .footInfo_list{
-        display: flex;
-    }
-    .footInfo_list>li>a{
-        font-weight: 500;
-        font-size: 16px;
-        color: #4A4A4A;
-    }
-    .footInfo_list>li{
-        margin-right: 25px;
-    }
-    .footInfo_list>li:last-of-type{
-        margin-right: 0;
-    }
-    .footInfo>.langBtn{
-        color: #0071E3;
-        position: relative;
-        transform: translateX(-20px);
-    }
-    .footInfo>.langBtn::after{
-        content: "";
-        width: 12px;
-        height: 12px;
-        background: url(../img/right_arrow.svg) no-repeat;
-        position: absolute;
-        right: -20px;
-        top: 50%;
-        transform: translateY(-55%);
-    }
-    .footInfo2{
-        margin-top: 30px;
-        display: flex;
-        font-size: 16px;
-    }
-    .footInfo2>ul{margin-right: 50px;}
-    .footInfo2>ul:last-of-type{margin-right: 0;}
-    .footerBottom>.footInfo2>ul>li{
-        padding: 8px 0;
-        font-size: 16px;
-    }
-    .infoCtg{font-weight: 500;}
-    .infoNumber{display: flex;}
-    .infoNumber>p{
-        margin-right: 20px;
-        font-size: 16px;
-        font-weight: 400;
-    }
-    .infoNumber>p:last-of-type{margin-right: 0;}
 
 
 

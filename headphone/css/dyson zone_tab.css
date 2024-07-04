@@ -608,7 +608,7 @@
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
-        row-gap: 30px;
+        row-gap: 60px;
     }
     .shopInfo>li{
         display: flex;
@@ -620,8 +620,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80px;
-        height: 80px;
+        width: 55px;
+        height: 55px;
     }
     .infoIcon>img{
         width: 100%;
@@ -630,18 +630,18 @@
     }
     .infoFrame{text-align: center;}
     .infoTitle{
-        font-size: 18px;
+        font-size: 20px;
+        margin-bottom: 15px;
     }
     .infoTxt,.infoBtn{
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 400;
     }
     .infoTxt{
         width: 210px;
-        margin: 20px 0;
+        margin-top: 10px;
     }
     .infoBtn{
-        margin-top: 20px;
         font-weight: 500;
         color: #0071E3;
         position: relative;
@@ -659,15 +659,6 @@
         top: 50%;
         transform: translateY(-40%);
     }
-
-
- 
-
-
-
-
-
-
 
 
 

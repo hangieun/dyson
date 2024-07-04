@@ -556,8 +556,8 @@
 
     
     
-    /* 구매 혜택 영역 */
-    .shopInfo{
+      /* 구매 혜택 영역 */
+      .shopInfo{
         box-sizing: border-box;
         width: 100%;
         display: grid;
