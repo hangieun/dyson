@@ -7,8 +7,8 @@ $(function(){
 
     $(".wrap").html(`<div class="hero">
     <div class="inner_content">
-        <h1>장바구니 총액: ${formatToKoreanWon(product[idx].pPrice)}</h1>
-        <a href="./payment.html" class="payBtn">결제</a>    
+        <h1 id="total">장바구니 총액: ${formatToKoreanWon(product[idx].pPrice*count)}</h1>
+        <a id="totalBtn" href="./payment.html?pd=${product[idx].pId}&pnt=${count}" class="payBtn">결제</a>    
     </div>
 </div>
 <div class="quantity">
@@ -38,7 +38,7 @@ $(function(){
                 <li>총계</li>
                 <li id="price3">${formatToKoreanWon(product[idx].pPrice*count)}</li>
             </ul>
-            <a href="./payment.html" class="payBtn">결제</a>
+            <a id="payBtn" href="./payment.html?pd=${product[idx].pId}&pnt=${count}" class="payBtn">결제</a>
         </div>
     </div>
 </div>`)
@@ -51,7 +51,9 @@ $(".btn_plus").click(function(){
     $("#price1").html(formatToKoreanWon(product[idx].pPrice*count))
     $("#price2").html(formatToKoreanWon(product[idx].pPrice*count))
     $("#price3").html(formatToKoreanWon(product[idx].pPrice*count))
-
+    $("#total").html("장바구니 총액: "+formatToKoreanWon(product[idx].pPrice*count))
+    $("#payBtn").attr("href",`./payment.html?pd=${product[idx].pId}&pnt=${count}`)
+    $("#totalBtn").attr("href",`./payment.html?pd=${product[idx].pId}&pnt=${count}`)
 })
 $(".btn_minus").click(function(){
     count--
@@ -60,7 +62,9 @@ $(".btn_minus").click(function(){
     $("#price1").html(formatToKoreanWon(product[idx].pPrice*count))
     $("#price2").html(formatToKoreanWon(product[idx].pPrice*count))
     $("#price3").html(formatToKoreanWon(product[idx].pPrice*count))
-
+    $("#total").html("장바구니 총액: "+formatToKoreanWon(product[idx].pPrice*count))
+    $("#payBtn").attr("href",`./payment.html?pd=${product[idx].pId}&pnt=${count}`)
+    $("#totalBtn").attr("href",`./payment.html?pd=${product[idx].pId}&pnt=${count}`)
 })
 
 

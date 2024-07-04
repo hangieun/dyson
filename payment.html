@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/payment_pc.css">
+    <link rel="stylesheet" href="./css/payment_tab.css">
+    <link rel="stylesheet" href="./css/payment_mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/payment.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/koreaW.js"></script>
 </head>
 <body>
     <div class="all">
@@ -389,6 +393,16 @@
                     <h2>결제</h2>
                 </div>
             </div>
+            <div class="order">
+                <!-- <div class="inner_content">
+                    <ul class="orderList">
+                        <li><img src="./img/dysonzone.png" alt="다이슨존앱솔루트플러스"></li>
+                        <li>dyson zone absolute+ 블루/코퍼</li>
+                        <li>1</li>
+                        <li class="blueColor">999000</li>
+                    </ul>
+                </div> -->
+            </div>
             <div class="address">
                 <div class="inner_content">
                     <h1>배송 정보를 입력해주세요.</h1>
@@ -432,10 +446,10 @@
                 <div class="inner_content">
                     <h1>결제 방식을 선택해주세요.</h1>
                     <div class="paymentList">
-                        <a href="#" class="credit"><img src="./img/credit_card.svg" alt="신용카드">신용카드</a>
-                        <a href="#" class="cash"><img src="./img/cash.svg" alt="계좌이체">계좌이체</a>
+                        <button class="credit"><img src="./img/credit_card.svg" alt="신용카드">신용카드</button>
+                        <button class="cash"><img src="./img/cash.svg" alt="계좌이체">계좌이체</button>
+                        <a href="#" class="payBtn">주문하기</a>
                     </div>
-                    <a href="#" class="payBtn">주문하기</a>
                     <div class="notify">
                         <p>제품 관련 문의사항은 <span class="blueColor">1588-4253</span> 또는 <span class="blueColor">help@kr.dyson.com</span>로 문의하세요.</p>
                     </div>
