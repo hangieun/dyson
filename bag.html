@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/bag_pc.css">
+    <link rel="stylesheet" href="./css/bag_tab.css">
+    <link rel="stylesheet" href="./css/bag_mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/common.js"></script>
-    
+    <script src="./js/product.js"></script>
+    <script src="./js/koreaW.js"></script>
+    <script src="./js/bag.js"></script>
 </head>
 <body>
     <div class="all">
@@ -102,7 +106,7 @@
                                     <ul class="productMenu">
                                         <li><a href="./headphone/dyson zone.html">dyson zone 살펴보기</a></li>
                                         <li><a href="./headphone/product.html">다이슨 헤드폰 비교하기</a></li>
-                                        <li><a href="#">다이슨 헤드폰 쇼핑하기</a></li>
+                                        <li><a href="./purchase.html">다이슨 헤드폰 쇼핑하기</a></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -241,7 +245,7 @@
                             <ul class="subMenu_tab"> 
                                 <li><a href="./headphone/dyson zone.html zone.html">dyson zone 살펴보기</a></li>
                                 <li><a href="./headphone/product.html">다이슨 헤드폰 비교하기</a></li>
-                                <li><a href="#">다이슨 헤드폰 쇼핑하기</a></li>
+                                <li><a href="./purchase.html">다이슨 헤드폰 쇼핑하기</a></li>
                             </ul>
                         </li>
                         <li>
@@ -333,7 +337,7 @@
                             <ul class="subMenu_mobile"> 
                                 <li><a href="./headphone/dyson zone.html">dyson zone 살펴보기</a></li>
                                 <li><a href="./headphone/product.html">다이슨 헤드폰 비교하기</a></li>
-                                <li><a href="#">다이슨 헤드폰 쇼핑하기</a></li>
+                                <li><a href="./purchase.html">다이슨 헤드폰 쇼핑하기</a></li>
                             </ul>
                         </li>
                         <li>
@@ -384,20 +388,24 @@
             </div>
         </div>
         <div class="wrap">
-            <div class="hero">
+            <!-- <div class="hero">
                 <div class="inner_content">
-                    <h1>장바구니 총액: ₩999,900</h1>
-                    <a href="#" class="payBtn">결제</a>    
+                    <h1>장바구니 총액: ₩999,000</h1>
+                    <a href="./payment.html" class="payBtn">결제</a>    
                 </div>
             </div>
             <div class="quantity">
                 <div class="inner_content">
                     <ul class="productList">
                         <li>
-                            <img src="./img/dysonzone01.png" alt="다이슨존앱솔루트플러스">
+                            <img src="./img/dysonzone.png" alt="다이슨존앱솔루트플러스">
                         </li>
                         <li>dyson zone absolute+ 블루/코퍼</li>
-                        <li>1</li>
+                        <li>
+                            <button class="btn_minus">-</button>
+                            1
+                            <button class="btn_plus">+</button>
+                        </li>
                         <li>₩999,900</li>
                     </ul>
                     <div class="priceList">
@@ -413,10 +421,10 @@
                             <li>총계</li>
                             <li>₩999,900</li>
                         </ul>
-                        <a href="#" class="payBtn">결제</a>
+                        <a href="./payment.html" class="payBtn">결제</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="notify">
                 <div class="inner_content">
                     <p>제품 관련 문의사항은 <span class="blueColor">1588-4253</span>또는 <span class="blueColor">help@kr.dyson.com</span>로 문의하세요.</p>
@@ -435,8 +443,8 @@
                                 <h6>제품</h6>
                                 <li><a href="#">청소기</a></li>
                                 <li><a href="#">헤어케어</a></li>
-                                <li><a href="../air purifier/air purifier.html">공기청정기 및 선풍기</a></li>
-                                <li><a href="./dyson zone.html">헤드폰</a></li>
+                                <li><a href="./air purifier/air purifier.html">공기청정기 및 선풍기</a></li>
+                                <li><a href="./headphone/dyson zone.html">헤드폰</a></li>
                                 <li><a href="#">조명</a></li>
                                 <li><a href="#">액세서리 및 부품</a></li>
                                 <li><a href="#">스페셜 딜</a></li>

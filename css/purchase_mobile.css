@@ -130,7 +130,7 @@
         transition: all 0.7s ease 0s;
     }
     .faqList>dd.on{
-        height: 150px;
+        height: 180px;
         box-sizing: border-box;
         padding-top: 10px;
     }

@@ -1,0 +1,99 @@
+@media(min-width:1024px){
+
+
+
+    h1{font-size: 40px; font-weight: 700;}
+    h2{font-size: 25px; font-weight: 500;}
+    .blueColor{color: #0071E3;}
+
+    .wrap{margin-top: 70px;}
+    .subIndex h2{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+    }
+    .address{margin-top: 20px;}
+    .address h2{margin: 20px 0;}
+    .addressList>li:nth-of-type(2){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    label{display: none;}
+    input[type=text],input[type=number]{
+        box-sizing: border-box;
+        padding-left: 10px;
+        border: 1px solid #999;
+        font-size: 20px;
+        color: #999;
+        border-radius: 10px;
+        width: 640px;
+        height: 70px;
+        margin: 8px 0;
+        font-family: "Noto Sans KR", sans-serif;
+    }
+    input[type=text].on,
+    input[type=number].on{
+        border: 1px solid #0071E3;
+        color: #000;
+        font-weight: 500;
+    }
+    #area1,#area2{
+        width: 315px;
+    }
+
+
+    .payment{
+        margin-top: 30px;
+    }
+    .payment h2{
+        margin-bottom: 20px;
+    }
+    .credit,.cash{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 10px;
+        border: 1px solid #999;
+        font-size: 20px;
+        color: #999;
+        border-radius: 10px;
+        width: 600px;
+        height: 70px;
+        margin: 8px 0;
+        font-family: "Noto Sans KR", sans-serif;
+    }
+
+    .payBtn{
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0071E3;
+        width: 400px;
+        height: 50px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .notify{
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
