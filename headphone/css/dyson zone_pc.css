@@ -1,14 +1,13 @@
 @media(min-width:1024px){
-
     body.on{
         height: 100vh; 
         overflow: hidden;
     }
     /* common style */
 
-    h1{font-size: 130px;font-weight: 900;}
-    h2{font-size: 80px;font-weight: 700;}
-    h3{font-size: 60px;font-weight: 700;}
+    h1{font-size: 110px;font-weight: 900;}
+    h2{font-size: 70px;font-weight: 700;}
+    h3{font-size: 50px;font-weight: 700;}
     h5,p{font-size: 30px;font-weight: 500;}
     .blackColor{color: black;font-weight: bold;}
 
@@ -56,7 +55,7 @@
 
     /* 1섹션 다이슨존 인트로*/
     .intro{
-        background: url(../img/bg_img.png) no-repeat 50% 30%;
+        background: url(../img/bg_img.png) no-repeat 50% 30% / contain;
         margin: 100px 0;
     }
     .intro>.inner_content{
@@ -65,7 +64,7 @@
         align-items: center;
     }
     .introImg{
-        width: 90%;
+        width: 65%;
         object-fit: cover;
     }
     .dysonzoneIntro{
@@ -84,7 +83,7 @@
         justify-content: space-between;
     }
     .designContent .txtframe{
-        width: 408px;
+        width: 40%;
     }
     .designContent .txtframe>p{
         padding: 32px 0;
@@ -99,7 +98,7 @@
     }
     
     .designContent img{
-        width: 775px;
+        width: 55%;
         height: 796px;
         object-fit: cover;
     }
@@ -220,7 +219,7 @@
     /* 5섹션 */
     .sound{background: #000;}
     .sound .titleFrame{color: #fff;}
-    .titleFrame>p{padding-top: 50px;}
+    .titleFrame>p{padding-top: 100px;}
     .sound .titleFrame>.txtframe{
         width: 640px;
         margin-left: auto;
@@ -260,7 +259,7 @@
         bottom: 0;
     }
     .headphoneFrame {
-        width: 1320px;
+        width: 100%;
         height: 100vh;
         position: absolute;
         left: calc(50% - 660px);
@@ -272,19 +271,19 @@
         height:100%;
     }
     .soundImg {
-        width: 615px;
+        width: 480px;
         height: auto;
         object-fit: cover;
         position: absolute;
-        left: 353px;
-        bottom: 23px;
+        left: 395px;
+        bottom: 20px;
         opacity: 0;
     }
     .soundtxtStation{
-        width: 400px;
-        height: 430px;
+        width: 390px;
+        height: 280px;
         position: absolute;
-        right: 350px;
+        right: 120px;
         bottom: 50px;
         overflow: hidden;
         padding-top: 150px;
@@ -481,15 +480,15 @@
     /* 제품 구매, 컨텐츠, 등록 영역 */
     .subContents{margin: 100px 0;}
     .subContents>section{
-        margin: 10px auto;
-        width: 1600px;
-        height: 590px;
+        margin: 20px auto;
+        width: 90%;
+        height: 580px;
         background: #F8F8F8;
     }
     .subContents .inner_content{
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 0px 60px;
     }
@@ -516,6 +515,10 @@
     }
     .contentTxtframe>p{
         width: 350px;
+    }
+    .subImg{
+        width: 45%;
+        object-fit: cover;
     }
 
     /* ---------------컨텐츠 팝업---------------- */
@@ -567,7 +570,7 @@
     .popup_close{
         position: absolute;
         right: 2%;
-        top: 0;
+        top: 75px;
         transform: translateX(10%);
         z-index: 800;
         cursor: pointer;
@@ -615,14 +618,20 @@
     .support{
         position: relative;
     }
-    .supportTxtframe>p{
-        width: 545px;
+    .supportTxtframe{
+        padding-left: 80px;
+        width: 500px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
     .supportImg{
         position: absolute;
         right: 0;
         top: 0;
         height: 100%;
+        object-fit: cover;
     }
 
     

@@ -503,8 +503,8 @@
     }
     .popup_close{
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 25px;
+        top: 60px;
         z-index: 800;
         width: 20px;
         height: 20px;

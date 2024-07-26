@@ -52,8 +52,8 @@ $(document).ready(function() {
         let ani_1type_idx = Math.floor(ani_1type) // 0,1
         let ani_1type_progress = ani_1type - ani_1type_idx // 인덱스가 0,1일 때 0~1로 올라가는 소수
         
-        let ani_per410 = ani_1type_progress*410  
-        let ani_per80 = ani_1type_progress*80
+        let ani_per290 = ani_1type_progress*290  
+        let ani_per56 = ani_1type_progress*56
         let ani_per065 = 1-(ani_1type_progress*0.35)
         let ani_per1 = ani_1type_progress*1
         /////////////////////////////////////
@@ -75,7 +75,7 @@ $(document).ready(function() {
         if(distance>=0 && distance<aniLength){
             $(".audioElv").addClass("fixed").removeClass("bottom")
             if(ani_1type_idx==0){
-                $(".headphoneFrame").css("transform",`translate(${-ani_per410}px, ${ani_per80}px)scale(${ani_per065})`)
+                $(".headphoneFrame").css("transform",`translate(${-ani_per290}px, ${ani_per56}px)scale(${ani_per065})`)
             }
             else if(ani_1type_idx==1){
                 $(".soundImg").css("opacity",ani_per1)
@@ -276,8 +276,8 @@ $(document).ready(function() {
                 slidesPerView: 2,
                 spaceBetween: 25
             },
-            980: {
-                slidesPerView: 4,
+            1024: {
+                slidesPerView: 2.5,
                 spaceBetween: 30
             }
         }
