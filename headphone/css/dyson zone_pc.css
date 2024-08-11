@@ -55,7 +55,7 @@
 
     /* 1섹션 다이슨존 인트로*/
     .intro{
-        background: url(../img/bg_img.png) no-repeat 50% 30% / contain;
+        background: url(../img/bg_img.png) no-repeat 50% 30% / 95%;
         margin: 100px 0;
     }
     .intro>.inner_content{
@@ -271,12 +271,12 @@
         height:100%;
     }
     .soundImg {
-        width: 480px;
+        width: 38%;
         height: auto;
         object-fit: cover;
         position: absolute;
-        left: 395px;
-        bottom: 20px;
+        left: 31%;
+        bottom: 2%;
         opacity: 0;
     }
     .soundtxtStation{
@@ -570,7 +570,7 @@
     .popup_close{
         position: absolute;
         right: 2%;
-        top: 75px;
+        top: 65px;
         transform: translateX(10%);
         z-index: 800;
         cursor: pointer;
