@@ -187,10 +187,10 @@
     .intro>.inner_content{
         height: 100%;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
     }
     .introFrame{
-        transform: translateY(-30%);
+        transform: translateY(50%);
         width: 50%;
     }
     .introFrame>h2{

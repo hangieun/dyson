@@ -52,9 +52,9 @@ $(document).ready(function() {
         let ani_1type_idx = Math.floor(ani_1type) // 0,1
         let ani_1type_progress = ani_1type - ani_1type_idx // 인덱스가 0,1일 때 0~1로 올라가는 소수
         
-        let ani_per20 = ani_1type_progress*20  
-        let ani_per15 = ani_1type_progress*15
-        let ani_per065 = 1-(ani_1type_progress*0.35)
+        let ani_per30 = ani_1type_progress*-30  
+        // let ani_per25 = ani_1type_progress*25
+        let ani_per07 = 1-(ani_1type_progress*0.3)
         let ani_per1 = ani_1type_progress*1
         /////////////////////////////////////
 
@@ -75,7 +75,8 @@ $(document).ready(function() {
         if(distance>=0 && distance<aniLength){
             $(".audioElv").addClass("fixed").removeClass("bottom")
             if(ani_1type_idx==0){
-                $(".headphoneFrame").css("transform",`translate(${-ani_per20}%, ${ani_per15}%)scale(${ani_per065})`)
+                $(".headphoneFrame").css("transform",`translate(-50%, -50%) translateX(${ani_per30}%) 
+                    scale(${ani_per07})`)
             }
             else if(ani_1type_idx==1){
                 $(".soundImg").css("opacity",ani_per1)
@@ -132,13 +133,10 @@ $(document).ready(function() {
         if(distance>=0 && distance<aniLength){
             $(".audioElv_tab").addClass("fixed").removeClass("bottom")
             if(ani_1type_idx==0){
-                $(".headphoneFrame_tab").css("transform",`translate(${-ani_per60}px, ${ani_per30}px)scale(${ani_per08})`)
+                // $(".headphoneFrame_tab").css("transform",`translate(${-ani_per60}px, ${ani_per30}px)scale(${ani_per08})`)
                 $(".headphoneImg_tab").css("filter",`brightness(${ani_per08})`)
-
-            }
-            else if(ani_1type_idx==1){
                 $(".soundImg_tab").css("opacity",ani_per1)
-                
+
             }
             if(ani_1type_idx==1){
                 $(".soundtxtStation_tab").addClass("on")
